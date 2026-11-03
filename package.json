@@ -1,0 +1,11 @@
+{
+  "name": "talk-agentic-sdlc",
+  "private": true,
+  "scripts": {
+    "start": "serve . -l 1350",
+    "dev": "serve . -l 1350"
+  },
+  "devDependencies": {
+    "serve": "^14.2.5"
+  }
+}

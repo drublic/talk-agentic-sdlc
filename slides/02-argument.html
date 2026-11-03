@@ -1,0 +1,312 @@
+<section
+  data-cut="20 60"
+  data-s="S07"
+  data-title="The difference"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">The difference</p>
+    <p class="formula">Agent = Model + <i>Harness</i></p>
+    <div class="pair">
+      <div class="side">
+        <h3>Vibe Coding</h3>
+        <div class="model-card" aria-hidden="true">
+          <div class="orb">Model</div>
+        </div>
+      </div>
+      <div class="side">
+        <h3>Agentic Engineering</h3>
+        <div class="model-card boxed" aria-hidden="true">
+          <div class="orb">Model</div>
+        </div>
+        <div class="tagrow">
+          <span class="tag">prompts</span>
+          <span class="tag">tools</span>
+          <span class="tag">rules</span>
+          <span class="tag">sandboxes</span>
+          <span class="tag">guardrails</span>
+          <span class="tag">orchestration</span>
+          <span class="tag">observability</span>
+        </div>
+      </div>
+    </div>
+    <div class="rows">
+      <div><span>Intent lives in the chat</span><span>Intent lives in the repo</span></div>
+      <div><span>Prompt, code, “looks good”</span><span>Ticket, spec+plan, build, review</span></div>
+      <div><span>You accept the diff</span><span>You accept against a spec</span></div>
+    </div>
+    <p class="source">Agent = Model + Harness · <a href="https://www.linkedin.com/posts/addyosmani_the-new-software-development-lifecycle-with-activity-7472535945221783552-jk84" target="_blank" rel="noopener">Addy Osmani</a></p>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:45 · 60: 1:15.</strong></p>
+    <p>"Addy Osmani describes the difference this way. An agent is a language model plus a harness. The harness is the prompts, the tools, the rules, the sandboxes, the guardrails, the orchestration, and the observability."</p>
+    <p>"Vibe coding and agentic engineering can use the same language model. Vibe coding is that model with almost no harness. Agentic engineering is designing the harness on purpose."</p>
+    <p>"Vibe coding feels powerful. Agentic engineering ships reliably."</p>
+  </aside>
+</section>
+
+<section
+  class="tone-paper"
+  data-cut="20 60"
+  data-s="S08"
+  data-title="The difference"
+  data-state="paper"
+  data-background-color="oklch(0.955 0.016 90)"
+>
+  <div class="frame center">
+    <p class="quote-text">
+      <span class="mark" aria-hidden="true">“</span>
+      <mark class="swipe">Vibe coding</mark> is a loan you take out against your future self. <mark class="swipe">Agentic
+      engineering</mark> is the down payment on a maintainable codebase.
+    </p>
+    <p class="source"><a href="https://www.hansreinl.de/blog/from-vibe-coding-agentic-engineering" target="_blank" rel="noopener">Hans Reinl · April 2026</a></p>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:25 · 60: 0:40.</strong></p>
+    <p>"Vibe coding is a loan you take out against your future self. "</p>
+    <p>"The interest on that loan is paid in week two. The second change breaks the first, and nobody, including the agent, knows why the code looks the way it does."</p>
+    <p>"Agentic engineering is the down payment on a maintainable codebase."</p>
+  </aside>
+</section>
+
+<section
+  data-cut="20 60"
+  data-s="S09"
+  data-title="The difference"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <h2>Why Vibe Breaks in a Real Repo</h2>
+    <div class="breaks">
+      <article>
+        <span class="n">1</span>
+        <div>
+          <h3>Context Dies with the Chat.</h3>
+          <p>Station 2 puts it in the repo.</p>
+        </div>
+      </article>
+      <article>
+        <span class="n">2</span>
+        <div>
+          <h3>Intent Is Never Written Down.</h3>
+          <p>Station 3 makes a spec and a plan.</p>
+        </div>
+      </article>
+      <article>
+        <span class="n">3</span>
+        <div>
+          <h3>Diffs Get Rubber-Stamped.</h3>
+          <p>Station 4 keeps the build small.</p>
+        </div>
+      </article>
+      <article>
+        <span class="n">4</span>
+        <div>
+          <h3>Everyone Prompts Differently.</h3>
+          <p>The codebase drifts.</p>
+        </div>
+      </article>
+    </div>
+    <p class="quote-text breaks-quote"><span class="mark" aria-hidden="true">“</span>Structure scales, vibes don't.</p>
+    <p class="source"><a href="https://www.linkedin.com/posts/addyosmani_the-new-software-development-lifecycle-with-activity-7472535945221783552-jk84" target="_blank" rel="noopener">Addy Osmani</a></p>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:40 · 60: 1:00.</strong></p>
+    <p>"These are the four ways vibe coding breaks once the work is in a real repo, not a one-off chat. One: the context dies with the chat, so it has to live in the repo. Two: the intent is never written down, so you need a spec and a plan. Three: the diffs get rubber-stamped, so the build has to stay small. Four: everyone prompts differently, so the codebase drifts."</p>
+    <p>"Structure scales. Vibes don't."</p>
+  </aside>
+</section>
+
+<section
+  data-cut="60"
+  data-s="S09.1"
+  data-title="The difference"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">I'm not anti-vibe</p>
+    <h2>Vibe in the Sandbox. Agentic on Main.</h2>
+    <div class="zones">
+      <div class="zone sandbox">
+        <h3>Sandbox</h3>
+        <ul>
+          <li>Prototypes and spikes you'll throw away</li>
+          <li>Exploring UI options</li>
+          <li>Throwaway scripts, one-off analysis</li>
+        </ul>
+      </div>
+      <div class="gate-col">Gate</div>
+      <div class="zone main">
+        <h3>Main</h3>
+        <p>Nothing reaches main unreviewed.</p>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p><strong>60: 1:00.</strong></p>
+    <p>"I am not against vibe coding. It is how I learn what I want. Prototypes, a spike I will throw away, a few UI options, a one-off script."</p>
+    <p>"That output stays in the sandbox. It can become a prototype, or the input to a spec. It is never a merge candidate. Nothing reaches main unreviewed."</p>
+  </aside>
+</section>
+
+<section
+  data-cut="20 60"
+  data-s="S10"
+  data-title="The difference"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame center">
+    <p class="quote-text">
+      <span class="mark" aria-hidden="true">“</span>
+      The agent executes. The human defines intent, constraints, and
+      acceptance.
+    </p>
+    <ul class="words">
+      <li><i class="swatch intent" aria-hidden="true"></i> Intent</li>
+      <li><i class="swatch constraint" aria-hidden="true"></i> Constraints</li>
+      <li><i class="swatch accept" aria-hidden="true"></i> Acceptance</li>
+    </ul>
+    <p class="source"><a href="https://www.hansreinl.de/blog/agentic-engineering-across-the-software-development-lifecycle" target="_blank" rel="noopener">Hans Reinl · May 2026</a></p>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:30 · 60: 0:45.</strong></p>
+    <p>"This is the whole talk in one sentence. The agent executes. The human defines intent, constraints, and acceptance."</p>
+    <p>"Intent is what we are doing, and why. Constraints are what must never happen. Acceptance is how we know it is done."</p>
+    <p>"Keep acceptance in mind. That is the word that bit me."</p>
+  </aside>
+</section>
+
+<section
+  data-cut="60"
+  data-s="S10.1"
+  data-title="The difference"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">Five phases, two owners</p>
+    <h2>Accountability Never Moves.</h2>
+    <div class="swim" role="table" aria-label="Responsibility matrix">
+      <span></span>
+      <span class="ph">Discovery</span>
+      <span class="ph">Design</span>
+      <span class="ph">Build</span>
+      <span class="ph">Verify</span>
+      <span class="ph">Release</span>
+      <span class="who">AI</span>
+      <span class="cell ai">Options</span>
+      <span class="cell ai">Drafts</span>
+      <span class="cell ai">Code + tests</span>
+      <span class="cell ai">Findings</span>
+      <span class="cell ai">Summaries</span>
+      <span class="who">Human</span>
+      <span class="cell human">Priority</span>
+      <span class="cell human">Decisions</span>
+      <span class="cell human">Plan approval</span>
+      <span class="cell human">Acceptance</span>
+      <span class="cell human">Go / no-go</span>
+    </div>
+  </div>
+  <aside class="notes">
+    <p><strong>60: 2:30.</strong></p>
+    <p>"Five phases. In each one the agent has a job, and a human still owns the decision. Discovery: the agent offers options, a human sets the priority. Design: the agent drafts, a human decides. Build: the agent writes code and tests, a human approves the plan. Verify: the agent reports findings, a human accepts. Release: the agent summarises, a human says go or no-go."</p>
+    <p>"Accountability never moves to the agent."</p>
+    <p>"If a team adopts only three things, adopt these. Structured requirements. Architecture-aware integration. Hard verification gates."</p>
+    <p>"Discovery and design are product and UX. The agent makes that work more important, not less."</p>
+  </aside>
+</section>
+
+<section
+  data-cut="20 60"
+  data-s="S11"
+  data-title="The difference"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">The bottleneck moved</p>
+    <h2>Generation Got Fast.</h2>
+    <div class="pipes" aria-hidden="true">
+      <span class="spec">Spec</span>
+      <span class="code">Code</span>
+      <span class="review">Review</span>
+    </div>
+    <div class="statline">
+      <b>11.5 → 6.7</b>
+      <span>issue cycle time</span>
+    </div>
+    <p class="rule">
+      Generation Is Solved. Verification, Judgment, and Direction Are the New
+      Craft.
+    </p>
+    <figure class="proof">
+      <img
+        src="images/atlassian-cycle-time.png?v=1"
+        alt="Atlassian research callout: issue cycle time cut from 11.5 days to 6.7 days."
+      />
+    </figure>
+    <p class="source"><a href="https://www.atlassian.com/blog/ai-at-work/ai-sdlc-transformation-playbook" target="_blank" rel="noopener">Atlassian, AI SDLC playbook · Oct 2026</a> · <a href="https://www.linkedin.com/posts/addyosmani_the-new-software-development-lifecycle-with-activity-7472535945221783552-jk84" target="_blank" rel="noopener">Addy Osmani</a></p>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:40 · 60: 1:00.</strong></p>
+    <p>"Generation got fast. Addy Osmani's point is that implementation shrank from weeks to hours, and requirements, architecture, and verification stayed human-paced."</p>
+    <p>"Atlassian reports issue cycle time falling from 11.5 days to 6.7. Coding became asynchronous, and more than one thing runs at once. The bottlenecks moved to planning, design, review, and maintenance."</p>
+  </aside>
+</section>
+
+<section
+  data-cut="20 60"
+  data-s="S12"
+  data-title="The workflow"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">April → October 2026</p>
+    <h2>Out of the Chat. Into the Repo.</h2>
+    <div class="flow grow">
+      <div><span>Story in ChatGPT or Gemini</span><i>→</i><span>Ticket in Linear, via MCP</span></div>
+      <div><span>UI explored in v0</span><i>→</i><span>OpenSpec change in the repo</span></div>
+      <div><span>Cursor plan mode</span><i>→</i><span>Cursor plan mode</span></div>
+      <div><span>I gatekeep the architecture</span><i>→</i><span>Cloud agents, in parallel</span></div>
+      <div><span>One review, then merge</span><i>→</i><span>Many AI reviews. I merge.</span></div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:45 · 60: 1:30.</strong></p>
+    <p>"Let me tell you how my way of doing agentic engineering evolved, from April to October. A few months. Not a new job. The same work, moved out of the chat and into the repo."</p>
+    <p>"In April the user story lived in a chat, with ChatGPT or Gemini. I explored the UI in v0. I used Cursor's plan mode. I was the architectural gatekeeper. One review, then I merged."</p>
+    <p>"By October the story lives in Linear, and the agent reads it through MCP. The spec is an OpenSpec change, a spec folder in the repo. Plan mode stayed. The work went out to cloud agents in parallel. I run many AI reviews. I still merge every pull request myself."</p>
+  </aside>
+</section>
+
+<section
+  data-cut="60"
+  data-s="S12.1"
+  data-title="The workflow"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">Behind the afternoon</p>
+    <h2>Specialists Hand Off. I Merge.</h2>
+    <div class="net">
+      <div class="net-row">
+        <span>Chief of Staff</span>
+        <span>Customer Support</span>
+        <span>Codebase</span>
+      </div>
+      <div class="stem"></div>
+      <div class="hub">Orchestration</div>
+      <div class="stem"></div>
+      <div class="net-row">
+        <span>#122</span><span>#123</span><span>#124</span>
+        <span>#125</span><span>#126</span><span>#127</span>
+      </div>
+      <div class="stem"></div>
+      <div class="merge">Hans merges</div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p><strong>60: 1:30.</strong></p>
+    <p>"I don't sit in six Cursor windows. These specialists run on an orchestration platform for my agents. Chief of Staff, Customer Support, and Codebase. Each has its own context. They hand the code to Cursor. One cloud agent, one pull request."</p>
+    <p>"That platform caught two pull requests creating the same migration, number 211."</p>
+    <p>"The platform does not merge. I do."</p>
+  </aside>
+</section>

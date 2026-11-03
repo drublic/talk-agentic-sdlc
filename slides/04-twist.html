@@ -1,0 +1,149 @@
+<section
+  data-cut="20 60"
+  data-s="S23"
+  data-title="The twist"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <div class="done-layout">
+      <div>
+        <p class="kicker">Back to the riders</p>
+        <h2>NPO-157 Was Done.</h2>
+        <p class="lede">Marked Done on 20 September. Still happening on 15 October.</p>
+      </div>
+      <div class="stamp" aria-label="Done">Done</div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:25 · 60: 0:45.</strong></p>
+    <p>"The bug was not new. Linear issue NPO-157 was marked Done on 20 September. On 15 October the rides were still not landing on the bike computer."</p>
+    <p>"So how does an issue get done, and not fixed?"</p>
+  </aside>
+</section>
+
+<section
+  data-cut="20 60"
+  data-s="S24"
+  data-title="The twist"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">PR #78 · September</p>
+    <h2>The Old Issue Was Never Fixed.</h2>
+    <p class="lede">About 800 lines. One commit. It had a spec doc.</p>
+    <ol class="anatomy">
+      <li class="fragment">The spec never said the ride has to land on the bike computer.</li>
+      <li class="fragment">The tests were green. They never checked the bike computer.</li>
+      <li class="fragment">No AI review. No thorough human review.</li>
+      <li class="fragment">Linear closed it two seconds after the merge.</li>
+    </ol>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:50 · 60: 1:00.</strong></p>
+    <p>
+      "The old issue was never fixed. One Pull request with about 800 lines.
+      It had a spec doc but the spec never said the ride has to
+      land on the bike computer. The tests were green, and they never
+      checked the case if the ride was in the calendar. There was no AI review. Linear closed it two seconds
+      after the merge. Done meant merged."
+    </p>
+    <p>
+      "On the fast afternoon the AI review never started again, so we did
+      not catch that, and we hit the same issue."
+    </p>
+  </aside>
+</section>
+
+<section
+  data-cut="60"
+  data-s="S26"
+  data-title="The twist"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">Balance</p>
+    <h2>What Went Right.</h2>
+    <div data-strip="kept"></div>
+    <div class="insights">
+      <article>
+        <b>Read-Only First.</b>
+        <span>Code, plus SELECT-only on production.</span>
+      </article>
+      <article>
+        <b>#127 Refused.</b>
+        <span>No docs confirming the endpoint, no build.</span>
+      </article>
+      <article>
+        <b>211 Got Caught.</b>
+        <span>Two migrations, one number. Orchestration stopped it.</span>
+      </article>
+      <article>
+        <b>A Human Merged.</b>
+        <span>Every PR. The network doesn't.</span>
+      </article>
+    </div>
+  </div>
+  <aside class="notes">
+    <p><strong>60: 1:00.</strong></p>
+    <p>"A few things went right. The agents could read the code, and run select queries on production. They could not write."</p>
+    <p>"Pull request 127 refused to build an endpoint the docs did not confirm. That is the harness working. It stopped instead of guessing."</p>
+    <p>"Two migrations both took the number 211. The orchestration platform caught it. And every pull request was merged by me. The platform does not merge."</p>
+  </aside>
+</section>
+
+<section
+  data-cut="20 60"
+  data-s="S27"
+  data-title="The twist"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame center">
+    <p class="quote-text">
+      <span class="mark" aria-hidden="true">“</span>
+      Most agent failures, examined honestly, are configuration failures.
+    </p>
+    <div class="verdict">
+      <span class="c-accept">Model, fine.</span>
+      <span class="c-fail">Harness, not.</span>
+    </div>
+    <p class="source"><a href="https://www.linkedin.com/posts/addyosmani_the-new-software-development-lifecycle-with-activity-7472535945221783552-jk84" target="_blank" rel="noopener">Addy Osmani</a></p>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:25 · 60: 0:40.</strong></p>
+    <p>"Most agent failures, examined honestly, are configuration failures. The language model was fine. The harness was not."</p>
+    <p>"That is what happened in my case. The agents did what I asked. The setup around them failed."</p>
+  </aside>
+</section>
+
+<section
+  data-cut="20 60"
+  data-s="S29"
+  data-title="The twist"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">Four things I learned</p>
+    <div class="insights grow">
+      <article>
+        <b>Context Is Infrastructure.</b>
+        <span>If a rule isn't in the repo, it doesn't exist.</span>
+      </article>
+      <article>
+        <b>Spec over Prompt.</b>
+        <span>Acceptance is where bugs are cheapest.</span>
+      </article>
+      <article>
+        <b>Review Is the Bottleneck.</b>
+        <span>Design for it. Make it unskippable.</span>
+      </article>
+      <article>
+        <b>Done Is Not Verified.</b>
+        <span>Merged is not Done.</span>
+      </article>
+    </div>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:30 · 60: 0:45.</strong></p>
+    <p>"Four things I learned. If a rule is not in the repo, it does not exist. Acceptance is where bugs are cheapest. Review is the bottleneck, so design for it, and make it impossible to skip. And Done is not verified. Merged is not Done."</p>
+  </aside>
+</section>

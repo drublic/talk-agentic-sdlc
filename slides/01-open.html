@@ -1,0 +1,306 @@
+<section
+  class="tone-dark"
+  data-cut="20 60"
+  data-s="S01"
+  data-title="Title"
+  data-chrome="off"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <header class="title-event">
+    <p class="kicker" data-when="20">code.talks 2026 · Stage 3 · 5 Nov</p>
+    <p class="kicker" data-when="60">Digitale Leute Summit · 17 Nov</p>
+  </header>
+  <div class="frame">
+    <div class="title-grid">
+      <div>
+        <h1>From Vibe Coding<br />to <em>Agentic</em><br />Engineering.</h1>
+        <p class="byline">Designing the modern SDLC</p>
+      </div>
+      <svg
+        class="harness"
+        viewBox="0 0 420 420"
+        role="img"
+        aria-label="A model sitting inside a harness"
+      >
+        <rect class="scaffold" x="46" y="46" width="328" height="328" rx="36" />
+        <circle class="node" cx="46" cy="46" r="7" />
+        <circle class="node" cx="374" cy="46" r="7" />
+        <circle class="node" cx="374" cy="374" r="7" />
+        <circle class="node" cx="46" cy="374" r="7" />
+        <circle class="model" cx="210" cy="210" r="62" />
+        <text x="210" y="218" text-anchor="middle">Model</text>
+        <circle class="runner" r="8" cx="46" cy="46" />
+      </svg>
+    </div>
+  </div>
+  <footer class="title-credit">Hans Reinl · N+One</footer>
+  <aside class="notes">
+    <p><strong>20: 0:10 · 60: 0:15.</strong></p>
+  </aside>
+</section>
+
+<section
+  data-cut="20 60"
+  data-s="S01.1"
+  data-title="Opener"
+  data-chrome="off"
+  data-background-color="oklch(0.12 0.02 285)"
+>
+  <div class="opener">
+    <video
+      class="opener-video"
+      src="demo/opener.mp4"
+      playsinline
+      preload="auto"
+    ></video>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:20 · 60: 0:20.</strong> Eight seconds, with sound. Then:</p>
+    <p data-when="20">"Three weeks ago, on 15 October, at 14:27, I asked my agents to fix a bug. Let me tell you how that went."</p>
+    <p data-when="60">"A month ago, on 15 October, at 14:27, I asked my agents to fix a bug. Let me tell you how that went."</p>
+  </aside>
+</section>
+
+<section
+  class="tone-paper"
+  data-cut="20 60"
+  data-s="S02"
+  data-title="The afternoon"
+  data-state="paper"
+  data-background-color="oklch(0.955 0.016 90)"
+>
+  <div class="frame">
+    <p class="kicker">15 October</p>
+    <div class="mail-layout grow">
+      <div>
+        <h2>Two Emails.</h2>
+        <p class="lede">Same complaint. Two riders.</p>
+        <div class="brand-pair">
+          <img
+            class="brand-mark brand-nplus"
+            src="images/logos/nplusone-wordmark-black.svg"
+            alt="N+One"
+          />
+          <span class="brand-x" aria-hidden="true">×</span>
+          <img
+            class="brand-mark brand-garmin"
+            src="images/logos/garmin.png"
+            alt="Garmin"
+          />
+        </div>
+      </div>
+      <div class="mails">
+        <article class="mail">
+          <header><span class="redact" aria-hidden="true"></span><span>Rider</span></header>
+          <q>The rides are not on my bike computer. I'd pay for a Pro Subscription once they land there.</q>
+        </article>
+        <article class="mail">
+          <header><span class="redact" aria-hidden="true"></span><span>Rider</span></header>
+          <q>Happy to pay for a Pro Subscription once the sessions show up on my bike computer.</q>
+        </article>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:40 · 60: 1:00.</strong></p>
+    <p>"N+One is my startup, an AI cycling coach. It plans workouts and syncs them to Garmin. On 15 October I switched on paid subscriptions. The same day, two riders emailed, separately, and said the same thing: they'd pay for a Pro Subscription once the rides land on the bike computer."</p>
+    <p>"That's the best kind of bug report. A customer who wants to pay after a bug is being fixed."</p>
+    <p>"2 people. Sent separately. Almost the same words."</p>
+    <p data-when="60">"It is a conversational coach. It adapts the plan to how ready you are, and to the constraints of the week."</p>
+  </aside>
+</section>
+
+<section
+  data-cut="20 60"
+  data-s="S03"
+  data-title="The afternoon"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">14:27 · read-only</p>
+    <div class="evidence grow">
+      <div>
+        <h2>Investigate. Don't Touch It.</h2>
+        <p class="lede">Uploaded. Never landed.</p>
+        <div class="pills">
+          <span class="pill">27 uploads OK</span>
+          <span class="pill">Not on the bike computer</span>
+          <span class="pill">Library, not the calendar</span>
+        </div>
+      </div>
+      <div class="term" role="img" aria-label="Investigation findings">
+        <p class="prompt">code + SELECT-only · no writes</p>
+        <p class="hit"><span>Surprise</span><b>Uploads worked. All 27.</b></p>
+        <p class="hit">
+          <span>Surprise</span>
+          <b>Library only. The bike computer was empty.</b>
+        </p>
+      </div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:45 · 60: 1:15.</strong></p>
+    <p>
+      "At 14:27 I asked my agents to investigate. Look, and do not change
+      anything. The two riders thought we were not sending workouts to
+      Garmin."
+    </p>
+    <p>
+      "The investigation found the uploads had worked. All 27. The workout
+      was in the library, not on that day's calendar. The rider opens the
+      bike computer, and the ride is not there."
+    </p>
+  </aside>
+</section>
+
+<section
+  data-cut="20 60"
+  data-s="S04"
+  data-title="The afternoon"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">About fifty minutes later</p>
+    <h2>Three Green PRs.</h2>
+    <div class="beats">
+      <div class="beat"><time>14:27</time><b>Ask</b></div>
+      <div class="beat beat-now"><time>14:34</time><b>3 Decisions</b></div>
+      <div class="beat"><time>~15:17</time><b>3 Green</b></div>
+    </div>
+    <div class="fanned fanned-3" aria-label="Three pull requests, all green">
+      <article style="--i: 1.5"><b>Calendar</b><span>green</span></article>
+      <article style="--i: 2.5"><b>Bike computer</b><span>green</span></article>
+      <article style="--i: 3.5"><b>Garmin check</b><span>green</span></article>
+    </div>
+    <p class="hold fragment">Hold That Thought.</p>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:40 · 60: 1:30.</strong></p>
+    <p>
+      "At 14:34 I still had not written any code. There was this one major problem.
+      The rides did not land on the bike computer. So before I task any agent to building anything, I had to decide what
+      it means to fix this issue. What done means. If I leave that open, the agents that with start building guess what they should do."
+    </p>
+    <p>
+      "One. The workout is on that day's Garmin calendar, not only in the
+      library."
+    </p>
+    <p>
+      "Two. The rider sees it on the bike computer. The library alone does
+      not count."
+    </p>
+    <p>
+      "Three. A newly uploaded workout always lands on the bike computer."
+    </p>
+    <p>
+      "I sent those calls out to my agents. 3 PRs got built, each from its
+      own Cursor cloud agent."
+    </p>
+    <p>
+      "About fifteen minutes after that, all three were green. They added about 1,500 lines.
+      Let's talk about these changes later. At the end I'll show what went wrong."
+    </p>
+  </aside>
+</section>
+
+<section
+  data-cut="20 60"
+  data-s="S05"
+  data-title="Hans"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <div class="person">
+      <img src="images/hans-reinl.jpg" alt="Hans Reinl" />
+      <div class="person-main">
+        <p class="kicker">Hans Reinl</p>
+        <h2>I Build with Agents Every Day.</h2>
+        <p class="person-who">AI-Native Systems Architect &amp; Engineering Advisor.</p>
+        <p class="person-line">I advise teams who want to work more efficiently with AI.</p>
+        <div class="roles">
+          <div class="role">
+            <img src="images/logos/n-plus.svg" alt="N+One" />
+            <p>Founder, N+One<span>AI cycling coach · adaptive training</span></p>
+          </div>
+          <div class="role">
+            <img class="logo-joyn" src="images/logos/joyn.svg" alt="Joyn" />
+            <p>ex VP Engineering, Joyn / ProSiebenSat.1<span>6 Teams · ~11M MAU</span></p>
+          </div>
+          <div class="role">
+            <img class="logo-wd" src="images/logos/working-draft.svg" alt="Working Draft" />
+            <p>Co-host, Working Draft podcast<span>since 2011</span></p>
+          </div>
+        </div>
+      </div>
+      <a class="bio-qr" href="https://www.hansreinl.de/blog">
+        <span class="qr">
+          <img src="images/qr-blog.png" alt="QR code to hansreinl.de/blog" />
+        </span>
+        <span class="bio-qr-label">
+          <b>Blog</b>
+          <span>hansreinl.de/blog</span>
+        </span>
+      </a>
+    </div>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:25 · 60: 0:45.</strong></p>
+    <p>
+      "My name is Hans Reinl. I build with agents every day. I'm the founder of N+One. I advise
+      teams who want to work more efficiently with AI. Before that I was
+      VP Engineering at Joyn, a streaming platform, where I tried to
+      optimize the SDLC with the teams I was responsible for."
+    </p>
+    <p data-when="20">
+      "Enough about me. Let's talk about the title of this talk."
+    </p>
+    <p data-when="60">
+      "I'll come back to what I'd do as a VP there today. First, the shape
+      of this hour: from one developer to the whole team."
+    </p>
+  </aside>
+</section>
+
+<section
+  data-cut="20"
+  data-s="S05.1"
+  data-title="Title"
+  data-chrome="off"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <div class="title-grid title-only">
+      <h1>From Vibe Coding<br />to <em>Agentic</em><br />Engineering.</h1>
+    </div>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:20.</strong></p>
+    <p>
+      "From Vibe Coding to Agentic Engineering. The two words in the title
+      are not the same thing. Let me show you the difference."
+    </p>
+  </aside>
+</section>
+
+<section
+  data-cut="60"
+  data-s="S06.1"
+  data-title="Today"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">Today</p>
+    <h2>From One Developer to the Whole Team.</h2>
+    <div class="steps grow">
+      <div class="step"><b>01</b><span>The loop. Ticket to PR. Live.</span></div>
+      <div class="step"><b>02</b><span>Verification and release. When Done isn't done.</span></div>
+      <div class="step"><b>03</b><span>Team, product, UX. Who writes the spec.</span></div>
+      <div class="step"><b>04</b><span>Roles. Juniors, seniors, hiring.</span></div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p><strong>60: 1:15.</strong></p>
+    <p>"Four parts. First, the loop, from the ticket to the pull request, live. Then verification and release, and the day Done was not done. Then the team: product, UX, and who writes the spec. Then the roles. Juniors, seniors, and hiring."</p>
+    <p>"Engineers, part one is yours. Product and UX, stay through part one anyway. The spec is where you come in, and part three is about you. Questions at the end."</p>
+  </aside>
+</section>
