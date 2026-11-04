@@ -103,9 +103,9 @@
   </div>
   <aside class="notes">
     <p><strong>20: 0:40 · 60: 1:00.</strong></p>
-    <p>"N+One is my startup, an AI cycling coach. It plans workouts and syncs them to Garmin. On 15 October I switched on paid subscriptions. The same day, two riders emailed, separately, and said the same thing: they'd pay for a Pro Subscription once the rides land on the bike computer."</p>
+    <p>"N+One is my startup, an AI cycling coach. It plans workouts and syncs them to your bike computer, Garmin watch. On 15 October I switched on paid subscriptions. Big day for me.
+      The same day, two riders emailed, separately, and said the same thing: they'd pay for a Pro Subscription once the planned rides land on their Garmin bike computer."</p>
     <p>"That's the best kind of bug report. A customer who wants to pay after a bug is being fixed."</p>
-    <p>"2 people. Sent separately. Almost the same words."</p>
     <p data-when="60">"It is a conversational coach. It adapts the plan to how ready you are, and to the constraints of the week."</p>
   </aside>
 </section>
@@ -135,6 +135,14 @@
           <span>Surprise</span>
           <b>Library only. The bike computer was empty.</b>
         </p>
+        <p class="hit">
+          <span>Surprise</span>
+          <b>Not on that day's calendar.</b>
+        </p>
+        <p class="hit hit-result">
+          <span>So</span>
+          <b>Nothing to train.</b>
+        </p>
       </div>
     </div>
   </div>
@@ -142,13 +150,13 @@
     <p><strong>20: 0:45 · 60: 1:15.</strong></p>
     <p>
       "At 14:27 I asked my agents to investigate. Look, and do not change
-      anything. The two riders thought we were not sending workouts to
+      anything. It looked like we were not sending workouts to
       Garmin."
     </p>
     <p>
       "The investigation found the uploads had worked. All 27. The workout
-      was in the library, not on that day's calendar. The rider opens the
-      bike computer, and the ride is not there."
+      was in the library. The problem was differnt: Workout was not on that day's calendar. And thus the rider opens the
+      bike computer, and the workout is not there and the rider does not know what to train."
     </p>
   </aside>
 </section>
@@ -160,14 +168,14 @@
   data-background-color="oklch(0.16 0.022 285)"
 >
   <div class="frame">
-    <p class="kicker">About fifty minutes later</p>
-    <h2>Three Green PRs.</h2>
+    <p class="kicker">About fifteen minutes later</p>
+    <h2>One PR. Three Greens.</h2>
     <div class="beats">
       <div class="beat"><time>14:27</time><b>Ask</b></div>
-      <div class="beat beat-now"><time>14:34</time><b>3 Decisions</b></div>
-      <div class="beat"><time>~15:17</time><b>3 Green</b></div>
+      <div class="beat beat-now"><time>14:34</time><b>3 Greens</b></div>
+      <div class="beat"><time>~15:17</time><b>PR Green</b></div>
     </div>
-    <div class="fanned fanned-3" aria-label="Three pull requests, all green">
+    <div class="fanned fanned-3" aria-label="Three acceptance checks in one pull request">
       <article style="--i: 1.5"><b>Calendar</b><span>green</span></article>
       <article style="--i: 2.5"><b>Bike computer</b><span>green</span></article>
       <article style="--i: 3.5"><b>Garmin check</b><span>green</span></article>
@@ -179,26 +187,23 @@
     <p>
       "At 14:34 I still had not written any code. There was this one major problem.
       The rides did not land on the bike computer. So before I task any agent to building anything, I had to decide what
-      it means to fix this issue. What done means. If I leave that open, the agents that with start building guess what they should do."
+      it means to fix this issue. What done means. If I leave that open, the agents will guess what DONE means. This might not be what I want."
+    </p>
+    <p>"3 Things needed to be green before we can call it DONE."</p>
+    <p>
+      "One. The workout is on that day's Garmin calendar."
     </p>
     <p>
-      "One. The workout is on that day's Garmin calendar, not only in the
-      library."
-    </p>
-    <p>
-      "Two. The rider sees it on the bike computer. The library alone does
-      not count."
+      "Two. The rider sees the workout on the bike computer. The library alone does not count."
     </p>
     <p>
       "Three. A newly uploaded workout always lands on the bike computer."
     </p>
     <p>
-      "I sent those calls out to my agents. 3 PRs got built, each from its
-      own Cursor cloud agent."
-    </p>
-    <p>
-      "About fifteen minutes after that, all three were green. They added about 1,500 lines.
-      Let's talk about these changes later. At the end I'll show what went wrong."
+      "I sent those calls out to my agents. The PR got built from its
+      own Cursor cloud agent.
+      And about fifteen minutes later, the PR had around 1,500 lines of code and was green.
+      Let's talk about these changes later."
     </p>
   </aside>
 </section>
@@ -276,8 +281,8 @@
   <aside class="notes">
     <p><strong>20: 0:20.</strong></p>
     <p>
-      "From Vibe Coding to Agentic Engineering. The two words in the title
-      are not the same thing. Let me show you the difference."
+      "From Vibe Coding to Agentic Engineering. The two terms in the title
+      are not the same thing. Let me show you what I mean by this."
     </p>
   </aside>
 </section>

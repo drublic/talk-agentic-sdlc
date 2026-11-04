@@ -7,16 +7,16 @@
   <div class="frame">
     <div class="done-layout">
       <div>
-        <p class="kicker">Back to the riders</p>
-        <h2>NPO-157 Was Done.</h2>
-        <p class="lede">Marked Done on 20 September. Still happening on 15 October.</p>
+        <p class="kicker">Back to the missing riders</p>
+        <h2>The Bug Was Not New.</h2>
+        <p class="lede">NPO-157 was marked Done on 20 June. Still happening on 15 October.</p>
       </div>
       <div class="stamp" aria-label="Done">Done</div>
     </div>
   </div>
   <aside class="notes">
     <p><strong>20: 0:25 · 60: 0:45.</strong></p>
-    <p>"The bug was not new. Linear issue NPO-157 was marked Done on 20 September. On 15 October the rides were still not landing on the bike computer."</p>
+    <p>"The bug was not new. Linear issue NPO-157 was marked Done on 20 June. On 15 October the rides were still not landing on the bike computer."</p>
     <p>"So how does an issue get done, and not fixed?"</p>
   </aside>
 </section>
@@ -41,15 +41,11 @@
   <aside class="notes">
     <p><strong>20: 0:50 · 60: 1:00.</strong></p>
     <p>
-      "The old issue was never fixed. One Pull request with about 800 lines.
+      "Actually, the old issue was never fixed. One Pull request with about 800 lines.
       It had a spec doc but the spec never said the ride has to
       land on the bike computer. The tests were green, and they never
-      checked the case if the ride was in the calendar. There was no AI review. Linear closed it two seconds
+      checked the case if the ride was in the calendar. There was no AI review. No thorough human review. Linear closed it two seconds
       after the merge. Done meant merged."
-    </p>
-    <p>
-      "On the fast afternoon the AI review never started again, so we did
-      not catch that, and we hit the same issue."
     </p>
   </aside>
 </section>
@@ -124,19 +120,19 @@
   <div class="frame">
     <p class="kicker">Four things I learned</p>
     <div class="insights grow">
-      <article>
+      <article class="fragment">
         <b>Context Is Infrastructure.</b>
         <span>If a rule isn't in the repo, it doesn't exist.</span>
       </article>
-      <article>
+      <article class="fragment">
         <b>Spec over Prompt.</b>
         <span>Acceptance is where bugs are cheapest.</span>
       </article>
-      <article>
+      <article class="fragment">
         <b>Review Is the Bottleneck.</b>
         <span>Design for it. Make it unskippable.</span>
       </article>
-      <article>
+      <article class="fragment">
         <b>Done Is Not Verified.</b>
         <span>Merged is not Done.</span>
       </article>

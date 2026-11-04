@@ -600,6 +600,15 @@ section[data-s="S01"] > .title-credit {
   margin-top: 4px;
 }
 
+.hit-result span {
+  border-color: var(--fail);
+  color: var(--fail);
+}
+
+.hit-result b {
+  color: var(--fail);
+}
+
 .pills {
   display: flex;
   flex-wrap: wrap;
@@ -1437,6 +1446,14 @@ section[data-s="S09"] .quote-text .mark {
 
 .kv p { font-size: 28px; line-height: 1.4; }
 
+.kv .ticket-key {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  border-bottom: 3px solid var(--accept);
+  padding-bottom: 2px;
+}
+
 /* ─── Tickets ────────────────────────────────────────── */
 
 .tickets {
@@ -1678,6 +1695,35 @@ section[data-s="S09"] .quote-text .mark {
 }
 
 .present .stamp { animation: pop 0.55s var(--ease) both; }
+
+.win-layout h2 {
+  font-size: 92px;
+  letter-spacing: -0.04em;
+}
+
+.win-emoji {
+  display: inline-block;
+  font-size: 0.85em;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.present .win-layout h2 {
+  animation: arrive 0.45s var(--ease) both;
+}
+
+.present .win-layout .lede {
+  animation: arrive 0.45s var(--ease) 0.12s both;
+}
+
+.present .win-emoji {
+  animation: win-pop 0.55s var(--ease) 0.35s both;
+}
+
+@keyframes win-pop {
+  from { opacity: 0; transform: scale(0.6); }
+  to { opacity: 1; transform: scale(1); }
+}
 
 .anatomy {
   display: flex;

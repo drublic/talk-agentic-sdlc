@@ -18,8 +18,8 @@
     <p data-when="60">"I still merge. This is the path the work takes before that."</p>
     <p>"Six stations. Ticket, context, spec and plan, build, review, hand-off. This is the software development lifecycle with an agent in it."</p>
     <p>"The lifecycle before that was the same job. A ticket, then design, then build, then test, then ship. A person carried the context from step to step, and a person wrote the code."</p>
-    <p>"A person writing the code was the slow part. That part got fast. An agent can produce the change in an afternoon. So the rest of the path has to change. The ticket has to be something an agent can start from. The context has to live in the repo, not in someone's head. The spec and the plan come before the code. You still read the diff, and a human still merges."</p>
-    <p>"Each station has one tool, one artifact, and one rule. I'll take the stations one by one."</p>
+    <p>"A person writing the code was the slow part. With AI, that part got fast. So the rest of the path has to adapt. The ticket has to be something an agent can start from. The context has to live in the repo, not in someone's head. The spec and the plan come before the code. You still read the diff, and a human still reviews andmerges."</p>
+    <p>"Each station has one tool, one artifact, and one rule. Let's look at the stations one by one."</p>
   </aside>
 </section>
 
@@ -47,7 +47,11 @@
         </div>
         <div>
           <span class="k">Artifact</span>
-          <p>Problem. Acceptance. Out of scope. Links.</p>
+          <p>
+            Problem.
+            <b class="c-accept ticket-key">Acceptance</b>.
+            Out of scope. Links.
+          </p>
         </div>
       </div>
       <p class="rule">
@@ -58,10 +62,10 @@
   </div>
   <aside class="notes">
     <p><strong>20: 0:45 · 60: 0:45.</strong></p>
-    <p>"Let's talk about what a ticket has to look like before an agent can start from it."</p>
-    <p>"The agent reads the issue, the comments, and the linked issues in the editor. Nobody pastes them into a chat."</p>
+    <p>"This is what a ticket has to look like before an agent can start from it."</p>
+    <p>"The agent reads the issue, the comments, and the linked issues via the connected MCP. Nobody pastes this info into a chat."</p>
     <p>"The ticket needs the problem, the acceptance, what is out of scope, and the links. Acceptance is the important field. It is how we know the work is done."</p>
-    <p>"If a new colleague could not start from the ticket, an agent cannot either."</p>
+    <p>"The Rule is: If a new colleague could not start from the ticket, an agent cannot either."</p>
   </aside>
 </section>
 
@@ -135,8 +139,8 @@
     <p><strong>20: 0:50 · 60: 0:50.</strong></p>
     <p>"Next is context. The stack, the conventions, what to do, what never to do, and how to run the tests. Do not retype that into every chat. It lives in the repo, in a file called AGENTS.md."</p>
     <p>"Around that file, a small set of connections. For me that is Linear, the docs I already have, and a read-only database. More tools is not always better. Every tool costs context and attention."</p>
-    <p>"Atlassian compared agents that had their connected context with agents that did not. 44 percent more accurate, and 48 percent fewer tokens. The right context is not more for the agent to read. The agent is not reconstructing what it should already know, so the answer gets better, and it costs fewer tokens."</p>
-    <p>"Set it up once. Version it. Prune it."</p>
+    <p>"Atlassian compared agents that had their connected context with agents that did not. The ones with connected context were 44 percent more accurate, and used 48 percent fewer tokens. More information is not always better. The agent does not need to reconstruct what it already knows, so the answer gets better, and it costs fewer tokens."</p>
+    <p>"For Agents.md: Set it up once. Version it. Use is a map, a pointer to the actual docs, not a manual."</p>
   </aside>
 </section>
 
@@ -198,8 +202,8 @@
   </div>
   <aside class="notes">
     <p><strong>20: 0:50 · 60: 0:50.</strong></p>
-    <p>"The spec is what the agent builds against, and what the reviewer checks against. Without it, review means: does this look plausible."</p>
-    <p>"Bugs are cheapest in the spec. A prompt dies with the session. I write the spec together with an agent. Another agent reviews it for sanity and consistency. Then I review the spec. Once I am ok, we can move on."</p>
+    <p>"The spec is what the agent builds against, and what the reviewer checks against".</p>
+    <p>"Bugs are cheapest in the spec. I write the spec together with an agent. Another agent reviews it for sanity and consistency. Then I review the spec. Once I am ok, we can move on."</p>
     <p>"The bottleneck is the quality of the spec."</p>
   </aside>
 </section>
@@ -266,9 +270,10 @@
     <p>
       "The spec already says what done means. It does not mention each step
       in the code in detail. Plan mode is where the agent shows those
-      steps, before it writes any code. I approve the plan, or I reject
-      it. Reading a plan takes 30 seconds. Reading a diff of about 1,500
-      lines takes an hour, and you will still miss things."
+      steps, before it writes any code, and where we shape the architecture
+      so the build goes the right way.
+      Reading a plan takes 30 seconds. Reading a diff of about 1,500 lines
+      takes an hour, and you will still miss things."
     </p>
   </aside>
 </section>
@@ -300,15 +305,14 @@
           <p>Small commits. One per task. Tests alongside.</p>
         </div>
       </div>
-      <p class="rule">One Task Per Run.</p>
+      <p class="rule">One Task after the other.</p>
     </div>
   </div>
   <aside class="notes">
     <p><strong>20: 0:40 · 60: 0:40.</strong></p>
     <p>
-      "Then the agent builds. One task per run. Pick the right language
-      model for the job. Is it a completely new feature? Maybe using two
-      different models makes sense. But also know when to take the
+      "Then the agent builds. One task after the other. Pick the right language
+      model for the job. But also know when to take the
       keyboard back."
     </p>
   </aside>
@@ -382,7 +386,7 @@
   </div>
   <aside class="notes">
     <p><strong>20: 0:45 · 60: 1:00.</strong></p>
-    <p>"Review is the bottleneck. Keep the pull requests small. Read the test yourself. Let the AI review go first, so your attention stays on judgment."</p>
+    <p>"Next is the Code Review. Let the AI review go first, so your attention stays on judgment."</p>
     <p>"In the Stack Overflow Developer Survey this year, they found that 48 percent of developers trust the output when they can easily verify it."</p>
     <p>"In my reviews, I check four things. Did it meet the spec. Does the test cover the real case. Is anything outside the scope. Is there dead code."</p>
     <p>"Never merge a pull request you have not read yourself."</p>
@@ -439,7 +443,7 @@
   </div>
   <aside class="notes">
     <p><strong>20: 0:15.</strong></p>
-    <p>"That is my personal review routine. How you make verification and guardrails systematic for hundreds of developers is Fabian's talk. Stage 9, yesterday."</p>
+    <p>"That is my personal review routine. How you make verification and guardrails systematic for hundreds of developers was Fabian's talk. Stage 9, yesterday."</p>
   </aside>
 </section>
 
