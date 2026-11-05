@@ -4,8 +4,10 @@ Two cuts of one talk. The outline is the script. These slides are the picture.
 
 | Cut | Room | Open |
 |---|---|---|
-| 20 min | code.talks Hamburg, Stage 3, Thu 5 Nov 2026, 10:45 | [20.html](20.html) |
-| 50 min + questions | Digitale Leute Summit, 17 Nov 2026 | [60.html](60.html) |
+| 20 min | code.talks Hamburg, Stage 3, Thu 5 Nov 2026, 10:45 | [20.html](20.html) · [live](https://drublic.github.io/talk-agentic-sdlc/20.html) |
+| 50 min + questions | Digitale Leute Summit, 17 Nov 2026 | [60.html](60.html) · [live](https://drublic.github.io/talk-agentic-sdlc/60.html) |
+
+Shareable 20-minute deck: https://drublic.github.io/talk-agentic-sdlc/20.html
 
 ```bash
 npm install
@@ -13,6 +15,8 @@ npm start
 ```
 
 http://localhost:1350
+
+GitHub Pages deploys from `main` via `.github/workflows/pages.yml`.
 
 Speaker view: `S`. Overview: `O`. The 20-minute timer runs to 20:00 (rehearse to 19:00). The 60-minute timer runs to 50:00, then questions.
 
