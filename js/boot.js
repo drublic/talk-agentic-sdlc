@@ -199,7 +199,7 @@
 
   Promise.all(
     FILES.map(function (file) {
-      return fetch(file).then(function (res) {
+      return fetch(file, { cache: "no-cache" }).then(function (res) {
         if (!res.ok) throw new Error(file + " (" + res.status + ")");
         return res.text();
       });
