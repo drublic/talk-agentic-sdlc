@@ -27,7 +27,7 @@ jobs:
         run: |
           mkdir _site
           cp 20.html 60.html index.html _site/
-          cp -R css js slides images demo _site/
+          cp -R css js slides images demo cut-20 _site/
           touch _site/.nojekyll
 
       - uses: actions/configure-pages@v5

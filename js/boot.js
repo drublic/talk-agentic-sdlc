@@ -145,6 +145,21 @@
     Reveal.on("slidechanged", play);
   }
 
+  var titleSky = null;
+
+  function mountTitleSky() {
+    if (typeof window.mountHeroAtmosphere !== "function") return;
+    var slide = document.querySelector('section[data-s="S01"]');
+    if (!slide) return;
+    if (titleSky && titleSky.destroy) {
+      try {
+        titleSky.destroy();
+      } catch (err) {}
+      titleSky = null;
+    }
+    titleSky = window.mountHeroAtmosphere(slide, { intensity: "vital" });
+  }
+
   function start() {
     var minutes = CUT === "20" ? 20 : 50;
     Reveal.initialize({
@@ -170,6 +185,12 @@
       paintCounts();
       bindVideo();
       bindOpener();
+      mountTitleSky();
+      Reveal.on("slidechanged", function (ev) {
+        if (ev.currentSlide && ev.currentSlide.getAttribute("data-s") === "S01") {
+          mountTitleSky();
+        }
+      });
     });
   }
 

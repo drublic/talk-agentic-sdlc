@@ -1,41 +1,35 @@
 <section
-  class="tone-dark"
+  class="tone-dark sky-title"
   data-cut="20 60"
   data-s="S01"
   data-title="Title"
   data-chrome="off"
-  data-background-color="oklch(0.16 0.022 285)"
+  data-background-color="#04070a"
 >
-  <header class="title-event">
-    <p class="kicker" data-when="20">code.talks 2026 · Stage 3 · 5 Nov</p>
-    <p class="kicker" data-when="60">Digitale Leute Summit · 17 Nov</p>
-  </header>
-  <div class="frame">
-    <div class="title-grid">
-      <div>
-        <h1>From Vibe Coding<br />to <em>Agentic</em><br />Engineering.</h1>
-        <p class="byline">Designing the modern SDLC</p>
-      </div>
-      <svg
-        class="harness"
-        viewBox="0 0 420 420"
-        role="img"
-        aria-label="A model sitting inside a harness"
-      >
-        <rect class="scaffold" x="46" y="46" width="328" height="328" rx="36" />
-        <circle class="node" cx="46" cy="46" r="7" />
-        <circle class="node" cx="374" cy="46" r="7" />
-        <circle class="node" cx="374" cy="374" r="7" />
-        <circle class="node" cx="46" cy="374" r="7" />
-        <circle class="model" cx="210" cy="210" r="62" />
-        <text x="210" y="218" text-anchor="middle">Model</text>
-        <circle class="runner" r="8" cx="46" cy="46" />
-      </svg>
+  <div class="stage">
+    <div class="title-media" aria-hidden="true">
+      <div class="title-veil"></div>
     </div>
+    <header class="title-event eyebrow">
+      <p class="kicker" data-when="20">code.talks 2026 · Stage 3 · 5 Nov</p>
+      <p class="kicker" data-when="60">Digitale Leute Summit · 17 Nov</p>
+    </header>
+    <div class="frame">
+      <div class="title-grid title-only">
+        <div>
+          <h1 class="name">From Vibe Coding to<br /><em>Agentic</em> Engineering.</h1>
+          <p class="byline">Designing the modern SDLC</p>
+        </div>
+      </div>
+    </div>
+    <footer class="title-credit">Hans Reinl · N+One</footer>
   </div>
-  <footer class="title-credit">Hans Reinl · N+One</footer>
   <aside class="notes">
     <p><strong>20: 0:10 · 60: 0:15.</strong></p>
+    <p>
+      "From vibe coding to agentic engineering. Let's talk about how to design
+      the SDLC for agentic engineering."
+    </p>
   </aside>
 </section>
 
@@ -106,7 +100,6 @@
     <p>"N+One is my startup, an AI cycling coach. It plans workouts and syncs them to your bike computer, Garmin watch. On 15 October I switched on paid subscriptions. Big day for me.
       The same day, two riders emailed, separately, and said the same thing: they'd pay for a Pro Subscription once the planned rides land on their Garmin bike computer."</p>
     <p>"That's the best kind of bug report. A customer who wants to pay after a bug is being fixed."</p>
-    <p data-when="60">"It is a conversational coach. It adapts the plan to how ready you are, and to the constraints of the week."</p>
   </aside>
 </section>
 
@@ -163,6 +156,31 @@
 
 <section
   data-cut="20 60"
+  data-s="S03.1"
+  data-title="The afternoon"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame bike-shot">
+    <div class="bike-copy">
+      <p class="kicker">What done looks like</p>
+      <h2>The Workout on the Bike Computer.</h2>
+      <p class="lede">The plan of the day on the device.</p>
+    </div>
+    <figure class="bike-photo">
+      <img
+        src="images/bike-computer-workout.png?v=1"
+        alt="Bike computer showing a structured workout. The lower interval graph is outlined in red."
+      />
+    </figure>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:25 · 60: 0:35.</strong></p>
+    <p>"This is what Done looks like. The rider opens the bike computer, and the workout is there. The red box is the plan. Intervals. Targets. That is what was missing."</p>
+  </aside>
+</section>
+
+<section
+  data-cut="20 60"
   data-s="S04"
   data-title="The afternoon"
   data-background-color="oklch(0.16 0.022 285)"
@@ -180,10 +198,9 @@
       <article style="--i: 2.5"><b>Bike computer</b><span>green</span></article>
       <article style="--i: 3.5"><b>Garmin check</b><span>green</span></article>
     </div>
-    <p class="hold fragment">Hold That Thought.</p>
   </div>
   <aside class="notes">
-    <p><strong>20: 0:40 · 60: 1:30.</strong></p>
+    <p><strong>20: 0:40 · 60: 1:20.</strong></p>
     <p>
       "At 14:34 I still had not written any code. There was this one major problem.
       The rides did not land on the bike computer. So before I task any agent to building anything, I had to decide what
@@ -202,8 +219,30 @@
     <p>
       "I sent those calls out to my agents. The PR got built from its
       own Cursor cloud agent.
-      And about fifteen minutes later, the PR had around 1,500 lines of code and was green.
-      Let's talk about these changes later."
+      And about fifteen minutes later, the PR had around 1,500 lines of code and was green."
+    </p>
+  </aside>
+</section>
+
+<section
+  data-cut="20 60"
+  data-s="S04.1"
+  data-title="The afternoon"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame center">
+    <p class="kicker">Park this for a moment</p>
+    <h2 class="hold">Hold That Thought.</h2>
+    <p class="lede">
+      Fifteen minutes. One green PR. I will come back to what that really means.
+    </p>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:15 · 60: 0:20.</strong></p>
+    <p>
+      "Hold that thought. Green PR. Fifteen minutes. I will come back to what
+      that really means. First, who is talking, and why this afternoon matters
+      for how we design the SDLC."
     </p>
   </aside>
 </section>
@@ -251,17 +290,60 @@
   <aside class="notes">
     <p><strong>20: 0:25 · 60: 0:45.</strong></p>
     <p>
-      "My name is Hans Reinl. I build with agents every day. I'm the founder of N+One. I advise
-      teams who want to work more efficiently with AI. Before that I was
-      VP Engineering at Joyn, a streaming platform, where I tried to
-      optimize the SDLC with the teams I was responsible for."
+      "This is me. Hans Reinl. I build with agents every day. That green PR was
+      not a one-off demo. I'm the founder of N+One. I advise teams who want to
+      work more efficiently with AI. Before that I was VP Engineering at Joyn, a
+      streaming platform, where I tried to optimize the Software Development
+      Lifecycle with the teams I was responsible for."
     </p>
     <p data-when="20">
       "Enough about me. Let's talk about the title of this talk."
     </p>
     <p data-when="60">
-      "I'll come back to what I'd do as a VP there today. First, the shape
-      of this hour: from one developer to the whole team."
+      "The SDLC has always been something I spent time on. Metrics. Throughput.
+      Where work got stuck. With agents in that work, my day changed. And I
+      started asking what that does to the whole SDLC. That is what this hour
+      is about."
+    </p>
+  </aside>
+</section>
+
+<section
+  data-cut="20 60"
+  data-s="S05.0"
+  data-title="Agenda"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">Today</p>
+    <h2>What I Want to Talk About.</h2>
+    <ol class="agenda grow">
+      <li style="--d: 1">
+        <span class="agenda-n">01</span>
+        <b>The Shift</b>
+        <span>From vibe coding to agentic engineering.</span>
+      </li>
+      <li style="--d: 2">
+        <span class="agenda-n">02</span>
+        <b>The Agentic SDLC</b>
+        <span>One ticket to a pull request, station by station.</span>
+      </li>
+      <li style="--d: 3">
+        <span class="agenda-n">03</span>
+        <b>The Org Impact</b>
+        <span>Roles, teams, juniors, seniors, and hiring.</span>
+      </li>
+    </ol>
+  </div>
+  <aside class="notes">
+    <p><strong>20: 0:20 · 60: 0:30.</strong></p>
+    <p>"Three things today."</p>
+    <p>"One. The shift from vibe coding to agentic engineering. What actually changes."</p>
+    <p>"Two. The agentic SDLC. One ticket to a pull request, and where it breaks."</p>
+    <p>"Three. What this does to the organisation. Roles, juniors, seniors, hiring."</p>
+    <p data-when="60">
+      "Engineers, lean in now. Product and UX, stay anyway. The spec is your
+      door in. Questions at the end."
     </p>
   </aside>
 </section>
@@ -275,7 +357,7 @@
 >
   <div class="frame">
     <div class="title-grid title-only">
-      <h1>From Vibe Coding<br />to <em>Agentic</em><br />Engineering.</h1>
+      <h1>From Vibe Coding to<br /><em>Agentic</em> Engineering.</h1>
     </div>
   </div>
   <aside class="notes">
@@ -284,28 +366,5 @@
       "From Vibe Coding to Agentic Engineering. The two terms in the title
       are not the same thing. Let me show you what I mean by this."
     </p>
-  </aside>
-</section>
-
-<section
-  data-cut="60"
-  data-s="S06.1"
-  data-title="Today"
-  data-background-color="oklch(0.16 0.022 285)"
->
-  <div class="frame">
-    <p class="kicker">Today</p>
-    <h2>From One Developer to the Whole Team.</h2>
-    <div class="steps grow">
-      <div class="step"><b>01</b><span>The loop. Ticket to PR. Live.</span></div>
-      <div class="step"><b>02</b><span>Verification and release. When Done isn't done.</span></div>
-      <div class="step"><b>03</b><span>Team, product, UX. Who writes the spec.</span></div>
-      <div class="step"><b>04</b><span>Roles. Juniors, seniors, hiring.</span></div>
-    </div>
-  </div>
-  <aside class="notes">
-    <p><strong>60: 1:15.</strong></p>
-    <p>"Four parts. First, the loop, from the ticket to the pull request, live. Then verification and release, and the day Done was not done. Then the team: product, UX, and who writes the spec. Then the roles. Juniors, seniors, and hiring."</p>
-    <p>"Engineers, part one is yours. Product and UX, stay through part one anyway. The spec is where you come in, and part three is about you. Questions at the end."</p>
   </aside>
 </section>

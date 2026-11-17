@@ -28,7 +28,7 @@
   data-background-color="oklch(0.16 0.022 285)"
 >
   <div class="frame">
-    <p class="kicker">PR #78 · September</p>
+    <p class="kicker">PR #78 · June</p>
     <h2>The Old Issue Was Never Fixed.</h2>
     <p class="lede">About 800 lines. One commit. It had a spec doc.</p>
     <ol class="anatomy">
@@ -57,33 +57,31 @@
   data-background-color="oklch(0.16 0.022 285)"
 >
   <div class="frame">
-    <p class="kicker">Balance</p>
-    <h2>What Went Right.</h2>
+    <p class="kicker">In fairness</p>
+    <h2>The Guards Held. On the Code.</h2>
     <div data-strip="kept"></div>
-    <div class="insights">
+    <div class="insights" style="grid-template-columns: repeat(3, 1fr)">
       <article>
-        <b>Read-Only First.</b>
-        <span>Code, plus SELECT-only on production.</span>
+        <b>Read-Only.</b>
+        <span>Agents could query production, not change it.</span>
       </article>
       <article>
-        <b>#127 Refused.</b>
-        <span>No docs confirming the endpoint, no build.</span>
+        <b>An Agent Stopped.</b>
+        <span>No docs for the endpoint, so no code.</span>
       </article>
       <article>
-        <b>211 Got Caught.</b>
-        <span>Two migrations, one number. Orchestration stopped it.</span>
-      </article>
-      <article>
-        <b>A Human Merged.</b>
-        <span>Every PR. The network doesn't.</span>
+        <b>I Merged It.</b>
+        <span>Every PR goes through me. The June one too.</span>
       </article>
     </div>
+    <p class="lede fragment">Every guard checked the code. None checked the ride.</p>
   </div>
   <aside class="notes">
     <p><strong>60: 1:00.</strong></p>
-    <p>"A few things went right. The agents could read the code, and run select queries on production. They could not write."</p>
-    <p>"Pull request 127 refused to build an endpoint the docs did not confirm. That is the harness working. It stopped instead of guessing."</p>
-    <p>"Two migrations both took the number 211. The orchestration platform caught it. And every pull request was merged by me. The platform does not merge."</p>
+    <p>"To be fair, some guardrails held. The agents could read the code and query production. They could not change anything."</p>
+    <p>"One agent stopped because the docs did not confirm an endpoint. It did not guess."</p>
+    <p>"And no pull request merges without me. Including the one from June. I merged it."</p>
+    <p>[click] "So every guard checked the code. None of them checked that a ride lands on the bike computer. That is how an issue gets Done and not fixed."</p>
   </aside>
 </section>
 
@@ -102,11 +100,10 @@
       <span class="c-accept">Model, fine.</span>
       <span class="c-fail">Harness, not.</span>
     </div>
-    <p class="source"><a href="https://www.linkedin.com/posts/addyosmani_the-new-software-development-lifecycle-with-activity-7472535945221783552-jk84" target="_blank" rel="noopener">Addy Osmani</a></p>
   </div>
   <aside class="notes">
     <p><strong>20: 0:25 · 60: 0:40.</strong></p>
-    <p>"Most agent failures, examined honestly, are configuration failures. The language model was fine. The harness was not."</p>
+    <p>"Most agent failures I have looked at honestly were configuration failures. The language model was fine. The harness was not."</p>
     <p>"That is what happened in my case. The agents did what I asked. The setup around them failed."</p>
   </aside>
 </section>

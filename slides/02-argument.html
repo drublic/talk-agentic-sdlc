@@ -35,11 +35,10 @@
       <div><span>Prompt, code, “looks good”</span><span>Ticket, spec+plan, build, review</span></div>
       <div><span>You accept the diff</span><span>You accept against a spec</span></div>
     </div>
-    <p class="source">Agent = Model + Harness · <a href="https://www.linkedin.com/posts/addyosmani_the-new-software-development-lifecycle-with-activity-7472535945221783552-jk84" target="_blank" rel="noopener">Addy Osmani</a></p>
   </div>
   <aside class="notes">
     <p><strong>20: 0:45 · 60: 1:15.</strong></p>
-    <p>"Addy Osmani describes the difference this way. An agent is a language model plus a harness. The harness is the prompts, the tools, the rules, the sandboxes, the guardrails, the orchestration, and the observability."</p>
+    <p>"The way I think about it: an agent is a language model plus a harness. The harness is the prompts, the tools, the rules, the sandboxes, the guardrails, the orchestration, and the observability."</p>
     <p>"Vibe coding and agentic engineering can use the same language model. Vibe coding is that model with almost no harness. Agentic engineering is designing the harness on purpose."</p>
     <p>"While vibe coding feels powerful, agentic engineering ships reliably."</p>
   </aside>
@@ -77,44 +76,53 @@
   data-background-color="oklch(0.16 0.022 285)"
 >
   <div class="frame">
-    <h2>Why Vibe Breaks in a Real Repo</h2>
+    <h2>Why Vibe Breaks in a Real Project</h2>
     <div class="breaks">
       <article>
         <span class="n">1</span>
         <div>
           <h3>Context Dies with the Chat.</h3>
-          <p>Station 2 puts it in the repo.</p>
+          <p>Put the context in the repo.</p>
         </div>
       </article>
       <article>
         <span class="n">2</span>
         <div>
           <h3>Intent Is Never Written Down.</h3>
-          <p>Station 3 makes a spec and a plan.</p>
+          <p>Write a spec and a plan first.</p>
         </div>
       </article>
       <article>
         <span class="n">3</span>
         <div>
           <h3>Diffs Get Rubber-Stamped.</h3>
-          <p>Station 4 keeps the build small.</p>
+          <p>Keep each change small enough to review.</p>
         </div>
       </article>
       <article>
         <span class="n">4</span>
         <div>
           <h3>Everyone Prompts Differently.</h3>
-          <p>The codebase drifts.</p>
+          <p>Agree the rules once, or the codebase drifts.</p>
         </div>
       </article>
     </div>
     <p class="quote-text breaks-quote"><span class="mark" aria-hidden="true">“</span>Structure scales, vibes don't.</p>
-    <p class="source"><a href="https://www.linkedin.com/posts/addyosmani_the-new-software-development-lifecycle-with-activity-7472535945221783552-jk84" target="_blank" rel="noopener">Addy Osmani</a></p>
+    <p class="source"><a href="https://addyosmani.com/blog/new-sdlc-vibe-coding/" target="_blank" rel="noopener">Addy Osmani · The New Software Lifecycle, June 2026</a></p>
   </div>
   <aside class="notes">
     <p><strong>20: 0:40 · 60: 1:00.</strong></p>
-    <p>"These are the four ways vibe coding breaks once the work is in a real repo, not a one-off chat. One: the context dies with the chat, so it has to live in the repo. Two: the intent is never written down, so you need a spec and a plan. Three: the diffs get rubber-stamped, so the build has to stay small. Four: everyone prompts differently, so the codebase drifts."</p>
-    <p>"Structure scales. Vibes don't."</p>
+    <p>"These are the four ways vibe coding breaks once the work is in a real repo, not a one-off chat.
+      <br>One: the context dies with the chat, so the next session starts from zero.
+      <br>Two: the intent is never written down, so Done is whatever the model invents.
+      <br>Three: nobody really reviews the diffs, so risky changes land on main.
+      <br>Four: every person prompts their own way, so the codebase slowly falls apart."</p>
+    <p>
+      "That is why I write the process into the repo. Context lives in files.
+      Spec and plan before build. Small changes you can actually review.
+      Shared rules, not a vibe you have to remember. Or, as Addy Osmani put
+      it: Structure scales. Vibes don't."
+    </p>
   </aside>
 </section>
 
@@ -126,27 +134,32 @@
 >
   <div class="frame">
     <p class="kicker">I'm not anti-vibe</p>
-    <h2>Vibe in the Sandbox. Agentic on Main.</h2>
-    <div class="zones">
-      <div class="zone sandbox">
-        <h3>Sandbox</h3>
-        <ul>
-          <li>Prototypes and spikes you'll throw away</li>
-          <li>Exploring UI options</li>
-          <li>Throwaway scripts, one-off analysis</li>
-        </ul>
+    <h2>Vibe Never Merges.</h2>
+    <div class="vibe-gate" aria-label="Two paths from vibe">
+      <div class="lane dead">
+        <span class="step faint">Vibe</span>
+        <i class="stop" aria-hidden="true">↛</i>
+        <span class="step blocked">Main</span>
+        <span class="lane-tag">Not a PR</span>
       </div>
-      <div class="gate-col">Gate</div>
-      <div class="zone main">
-        <h3>Main</h3>
-        <p>Nothing reaches main unreviewed.</p>
+      <div class="lane live">
+        <span class="step">Vibe</span>
+        <i aria-hidden="true">→</i>
+        <span class="step">Spec</span>
+        <i aria-hidden="true">→</i>
+        <span class="step">Review</span>
+        <i aria-hidden="true">→</i>
+        <span class="step on">Main</span>
+        <span class="lane-tag">Through the loop</span>
       </div>
     </div>
+    <p class="rule">Learn in the Sandbox. Ship Through the Loop.</p>
   </div>
   <aside class="notes">
-    <p><strong>60: 1:00.</strong></p>
+    <p><strong>60: 0:50.</strong></p>
     <p>"I am not against vibe coding. It is how I learn what I want. Prototypes, a spike I will throw away, a few UI options, a one-off script."</p>
-    <p>"That output stays in the sandbox. It can become a prototype, or the input to a spec. It is never a merge candidate. Nothing reaches main unreviewed."</p>
+    <p>"That output never becomes a pull request. It can die in the sandbox. Or it can become the input to a spec. Only then does it reach review and the real loop can start."</p>
+    <p>"Learn in the Sandbox. Ship Through the Loop."</p>
   </aside>
 </section>
 
@@ -157,35 +170,90 @@
   data-background-color="oklch(0.16 0.022 285)"
 >
   <div class="frame">
-    <p class="kicker">Five phases, two owners</p>
+    <p class="kicker">Across the whole loop</p>
     <h2>Accountability Never Moves.</h2>
-    <div class="swim" role="table" aria-label="Responsibility matrix">
-      <span></span>
-      <span class="ph">Discovery</span>
-      <span class="ph">Design</span>
-      <span class="ph">Build</span>
-      <span class="ph">Verify</span>
-      <span class="ph">Release</span>
-      <span class="who">AI</span>
-      <span class="cell ai">Options</span>
-      <span class="cell ai">Drafts</span>
-      <span class="cell ai">Code + tests</span>
-      <span class="cell ai">Findings</span>
-      <span class="cell ai">Summaries</span>
-      <span class="who">Human</span>
-      <span class="cell human">Priority</span>
-      <span class="cell human">Decisions</span>
-      <span class="cell human">Plan approval</span>
-      <span class="cell human">Acceptance</span>
-      <span class="cell human">Go / no-go</span>
+    <div class="account-rail" aria-label="Agent proposes in every phase. You decide in every phase.">
+      <div class="rail-phases" aria-hidden="true">
+        <span></span>
+        <span>Discovery</span>
+        <span>Design</span>
+        <span>Build</span>
+        <span>Verify</span>
+        <span>Release</span>
+      </div>
+      <div class="rail-row agent">
+        <span class="who">Agent</span>
+        <span class="band">Proposes</span>
+      </div>
+      <div class="rail-row human">
+        <span class="who">You</span>
+        <span class="band owns">Decide</span>
+      </div>
     </div>
+    <p class="rule">The Agent Drafts. You Still Own the Call.</p>
   </div>
   <aside class="notes">
-    <p><strong>60: 2:30.</strong></p>
-    <p>"Five phases. In each one the agent has a job, and a human still owns the decision. Discovery: the agent offers options, a human sets the priority. Design: the agent drafts, a human decides. Build: the agent writes code and tests, a human approves the plan. Verify: the agent reports findings, a human accepts. Release: the agent summarises, a human says go or no-go."</p>
-    <p>"Accountability never moves to the agent."</p>
-    <p>"If a team adopts only three things, adopt these. Structured requirements. Architecture-aware integration. Hard verification gates."</p>
-    <p>"Discovery and design are product and UX. The agent makes that work more important, not less."</p>
+    <p><strong>60: 0:40.</strong></p>
+    <p>
+      "When we look at the five phases of the SDLC, Discovery, Design, Build,
+      Verify, Release, the pattern is the same in every one. The agent proposes.
+      You decide. Accountability never moves to the agent."
+    </p>
+  </aside>
+</section>
+
+<section
+  data-cut="60"
+  data-s="S10.2"
+  data-title="The difference"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">Across the whole loop</p>
+    <h2>Accountability Never Moves.</h2>
+    <div class="account-rail account-rail-detail" aria-label="In every phase the agent proposes and you decide.">
+      <div class="rail-phases" aria-hidden="true">
+        <span></span>
+        <span>Discovery</span>
+        <span>Design</span>
+        <span>Build</span>
+        <span>Verify</span>
+        <span>Release</span>
+      </div>
+      <div class="rail-row agent">
+        <span class="who">Agent</span>
+        <div class="rail-cells">
+          <span class="fragment cell" data-fragment-index="1">Offers options</span>
+          <span class="fragment cell" data-fragment-index="2">Drafts</span>
+          <span class="fragment cell" data-fragment-index="3">Writes code and tests</span>
+          <span class="fragment cell" data-fragment-index="4">Reports findings</span>
+          <span class="fragment cell" data-fragment-index="5">Summarises</span>
+        </div>
+      </div>
+      <div class="rail-row human">
+        <span class="who">You</span>
+        <div class="rail-cells">
+          <span class="fragment cell owns" data-fragment-index="1">Set the priority</span>
+          <span class="fragment cell owns" data-fragment-index="2">Choose the shape</span>
+          <span class="fragment cell owns" data-fragment-index="3">Approve the plan</span>
+          <span class="fragment cell owns" data-fragment-index="4">Accept</span>
+          <span class="fragment cell owns" data-fragment-index="5">Say go or no-go</span>
+        </div>
+      </div>
+    </div>
+    <p class="rule">The Agent Drafts. You Still Own the Call.</p>
+  </div>
+  <aside class="notes">
+    <p><strong>60: 0:50.</strong></p>
+    <p>
+      "Discovery: the agent offers options, you set the priority. Design: the
+      agent drafts, you choose the shape. Build: the agent writes code and
+      tests, you approve the plan. Verify: the agent reports findings, you
+      accept. Release: the agent summarises, you say go or no-go."
+    </p>
+    <p>
+      "The agent makes front-loading the work, discovery and design more important. Not less."
+    </p>
   </aside>
 </section>
 
@@ -205,24 +273,23 @@
     </div>
     <div class="statline">
       <b>11.5 → 6.7</b>
-      <span>issue cycle time</span>
+      <span>days issue cycle time in an Atlassian measured rollout</span>
     </div>
     <p class="rule">
       Generation Is Solved. Verification, Judgment, and Direction Are the New
       Craft.
     </p>
-    <figure class="proof">
-      <img
-        src="images/atlassian-cycle-time.png?v=1"
-        alt="Atlassian research callout: issue cycle time cut from 11.5 days to 6.7 days."
-      />
-    </figure>
-    <p class="source"><a href="https://www.atlassian.com/blog/ai-at-work/ai-sdlc-transformation-playbook" target="_blank" rel="noopener">Atlassian, AI SDLC playbook · Oct 2026</a> · <a href="https://www.linkedin.com/posts/addyosmani_the-new-software-development-lifecycle-with-activity-7472535945221783552-jk84" target="_blank" rel="noopener">Addy Osmani</a></p>
+    <p class="source"><a href="https://www.atlassian.com/blog/ai-at-work/ai-sdlc-transformation-playbook" target="_blank" rel="noopener">Atlassian cycle time · AI SDLC Transformation Playbook, Oct 2026</a></p>
   </div>
   <aside class="notes">
     <p><strong>20: 0:40 · 60: 1:00.</strong></p>
-    <p>"Generation got fast. Addy Osmani's point is that implementation shrank from weeks to hours, and requirements, architecture, and verification stayed human-paced."</p>
-    <p>"Atlassian reports issue cycle time falling from 11.5 days to 6.7. Coding became asynchronous, and more than one thing runs at once. The bottlenecks moved to planning, design, review, and maintenance."</p>
+    <p>"Generation got fast. In my work, implementation went from weeks to hours. Requirements, architecture, and verification did not. Those stayed human-paced."</p>
+    <p>
+      "Atlassian measured that cycle time went from 11.5 days to 6.7. Coding became
+      asynchronous, and more than one thing runs at once. The bottlenecks moved
+      to planning, design, review, and maintenance. That is where I spend my
+      craft now."
+    </p>
   </aside>
 </section>
 
@@ -248,39 +315,5 @@
     <p>"Let me tell you how my way of agentic engineering evolved, and how I try to overcome the issues of vibe coding. The same work, moved out of the chat and into the repo."</p>
     <p>"In April the user story lived in a chat, with ChatGPT or Gemini. I explored the UI in v0. I used Cursor's plan mode for software design. I was the architectural gatekeeper. The Agent built it. One review, then I merged."</p>
     <p>"By now user stories live in Linear, and the agent reads the through the connected MCP. Changes become an OpenSpec change within the repo. Plan mode stayed for the architecture. The work went out to cloud agents in parallel. I run many AI reviews. I still merge every pull request myself."</p>
-  </aside>
-</section>
-
-<section
-  data-cut="60"
-  data-s="S12.1"
-  data-title="The workflow"
-  data-background-color="oklch(0.16 0.022 285)"
->
-  <div class="frame">
-    <p class="kicker">Behind the afternoon</p>
-    <h2>Specialists Hand Off. I Merge.</h2>
-    <div class="net">
-      <div class="net-row">
-        <span>Chief of Staff</span>
-        <span>Customer Support</span>
-        <span>Codebase</span>
-      </div>
-      <div class="stem"></div>
-      <div class="hub">Orchestration</div>
-      <div class="stem"></div>
-      <div class="net-row">
-        <span>#122</span><span>#123</span><span>#124</span>
-        <span>#125</span><span>#126</span><span>#127</span>
-      </div>
-      <div class="stem"></div>
-      <div class="merge">Hans merges</div>
-    </div>
-  </div>
-  <aside class="notes">
-    <p><strong>60: 1:30.</strong></p>
-    <p>"I don't sit in six Cursor windows. These specialists run on an orchestration platform for my agents. Chief of Staff, Customer Support, and Codebase. Each has its own context. They hand the code to Cursor. One cloud agent, one pull request."</p>
-    <p>"That platform caught two pull requests creating the same migration, number 211."</p>
-    <p>"The platform does not merge. I do."</p>
   </aside>
 </section>

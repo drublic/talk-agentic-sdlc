@@ -14,8 +14,7 @@
   </div>
   <aside class="notes">
     <p><strong>20: 0:20 · 60: 0:30.</strong></p>
-    <p data-when="20">"That move, out of the chat and into the repo, is a path. Let me walk it."</p>
-    <p data-when="60">"I still merge. This is the path the work takes before that."</p>
+    <p>"That move, out of the chat and into the repo, is a path. Let me walk it."</p>
     <p>"Six stations. Ticket, context, spec and plan, build, review, hand-off. This is the software development lifecycle with an agent in it."</p>
     <p>"The lifecycle before that was the same job. A ticket, then design, then build, then test, then ship. A person carried the context from step to step, and a person wrote the code."</p>
     <p>"A person writing the code was the slow part. With AI, that part got fast. So the rest of the path has to adapt. The ticket has to be something an agent can start from. The context has to live in the repo, not in someone's head. The spec and the plan come before the code. You still read the diff, and a human still reviews andmerges."</p>
@@ -78,23 +77,76 @@
   <div class="frame">
     <p class="kicker">Same bug, two tickets</p>
     <div class="tickets grow">
-      <article class="ticket">
-        <h3>Before</h3>
-        <p>“Rides are not on the bike computer, pls fix.”</p>
+      <article class="issue vague" aria-label="Vague ticket">
+        <header>
+          <span class="issue-id">NPO-156</span>
+          <span class="issue-status">Todo</span>
+        </header>
+        <h3 class="issue-title">Rides are not on the bike computer</h3>
+        <div class="issue-fields">
+          <div>
+            <span class="lbl">Description</span>
+            <p>Rides are not showing up on the bike computer. Pls fix.</p>
+          </div>
+          <div class="empty">
+            <span class="lbl">Acceptance</span>
+            <p>—</p>
+          </div>
+          <div class="empty">
+            <span class="lbl">Out of scope</span>
+            <p>—</p>
+          </div>
+          <div class="empty">
+            <span class="lbl">Links</span>
+            <p>—</p>
+          </div>
+        </div>
+        <footer class="issue-meta">
+          <span class="chip">Bug</span>
+          <span class="chip ghost">Agent cannot start</span>
+        </footer>
       </article>
-      <article class="ticket after">
-        <h3>Agent-Ready</h3>
-        <p><span class="lbl c-intent">Problem</span> The ride uploads, but it does not land on the bike computer.</p>
-        <p><span class="lbl c-accept">Acceptance</span> The rider opens the bike computer and the workout is there.</p>
-        <p><span class="lbl c-constraint">Out</span> Do not rewrite the workout.</p>
-        <p><span class="lbl">Links</span> NPO-157 · PR #78 · Garmin Training API.</p>
+      <article class="issue ready after" aria-label="Agent-ready ticket">
+        <header>
+          <span class="issue-id">NPO-157</span>
+          <span class="issue-status on">Ready</span>
+        </header>
+        <h3 class="issue-title">Ride uploads, missing on bike computer</h3>
+        <div class="issue-fields">
+          <div>
+            <span class="lbl c-intent">Problem</span>
+            <p>The ride uploads to the library, but it never lands on the bike computer.</p>
+          </div>
+          <div class="key">
+            <span class="lbl c-accept">Acceptance</span>
+            <p>The rider opens the bike computer and the workout is there. The library alone does not count.</p>
+          </div>
+          <div>
+            <span class="lbl c-constraint">Out</span>
+            <p>Do not rewrite the workout. Do not change the upload path.</p>
+          </div>
+          <div>
+            <span class="lbl">Links</span>
+            <p>NPO-157 · PR #78 · Garmin Training API docs</p>
+          </div>
+        </div>
+        <footer class="issue-meta">
+          <span class="chip">Bug</span>
+          <span class="chip">Agent-ready</span>
+        </footer>
       </article>
     </div>
   </div>
   <aside class="notes">
     <p><strong>60: 1:00.</strong></p>
     <p>"For product: this is the job. The agent writes faster than anyone in this room. Whether it writes the right thing depends on this ticket."</p>
-    <p>"Before, the ticket said the rides are not on the bike computer, please fix. After, it says the ride uploads, but it does not land on the bike computer. The rider opens the bike computer and the workout is there. The library alone does not count. Rewriting the workout is out of scope."</p>
+    <ul>
+      <li>Before: rides missing, please fix</li>
+      <li>After: uploads, but not on the bike computer</li>
+      <li>Acceptance: workout on the device</li>
+      <li>Library alone does not count</li>
+      <li>Out of scope: rewrite the workout</li>
+    </ul>
   </aside>
 </section>
 
@@ -126,21 +178,18 @@
         </div>
       </div>
       <p class="rule">Set It Up Once. Version It. Prune It.</p>
-      <figure class="proof">
-        <img
-          src="images/atlassian-context.png?v=1"
-          alt="Atlassian research callout: Teamwork Graph agents were 44% more accurate and used 48% fewer tokens."
-        />
-      </figure>
-      <p class="source"><a href="https://www.atlassian.com/blog/ai-at-work/ai-sdlc-transformation-playbook" target="_blank" rel="noopener">Atlassian, AI SDLC playbook · Oct 2026</a></p>
+      <p class="survey-cue">
+        <b>44% / 48%</b>
+        <span>more accurate, fewer tokens, when context is connected.</span>
+      </p>
+      <p class="source"><a href="https://www.atlassian.com/blog/ai-at-work/ai-sdlc-transformation-playbook" target="_blank" rel="noopener">connected-context figure · Atlassian, Oct 2026</a></p>
     </div>
   </div>
   <aside class="notes">
     <p><strong>20: 0:50 · 60: 0:50.</strong></p>
     <p>"Next is context. The stack, the conventions, what to do, what never to do, and how to run the tests. Do not retype that into every chat. It lives in the repo, in a file called AGENTS.md."</p>
     <p>"Around that file, a small set of connections. For me that is Linear, the docs I already have, and a read-only database. More tools is not always better. Every tool costs context and attention."</p>
-    <p>"Atlassian compared agents that had their connected context with agents that did not. The ones with connected context were 44 percent more accurate, and used 48 percent fewer tokens. More information is not always better. The agent does not need to reconstruct what it already knows, so the answer gets better, and it costs fewer tokens."</p>
-    <p>"For Agents.md: Set it up once. Version it. Use is a map, a pointer to the actual docs, not a manual."</p>
+    <p>"When the agent already has that context wired in, the answers get better and cheaper. One measurement put it at 44 percent more accurate, and 48 percent fewer tokens. More information is not always better. The agent does not need to reconstruct what it already knows."</p>
   </aside>
 </section>
 
@@ -150,23 +199,49 @@
   data-title="The loop"
   data-background-color="oklch(0.16 0.022 285)"
 >
-  <div class="frame">
-    <p class="kicker">AGENTS.md · redacted shape</p>
-    <h2>What the File Points At.</h2>
-    <div class="tree" role="img" aria-label="Shape of AGENTS.md, not a screenshot">
-      <div class="dir">AGENTS.md</div>
-      <div>→ OpenSpec and ADRs</div>
-      <div>→ tests, migrations, lint</div>
-      <div>→ hard constraints, the “never” lines</div>
-      <div class="why">MCP · Linear · docs · read-only prod DB</div>
+  <div class="frame agents-file">
+    <div class="agents-copy">
+      <p class="kicker">AGENTS.md · example</p>
+      <h2>What the File Points At.</h2>
+      <p class="lede">
+        Keep the file a map. Point at specs, decisions, commands, and the
+        connections the agent may use.
+      </p>
+      <p class="rule">A Map, Not a Manual.</p>
     </div>
-    <p class="rule">A Map, Not a Manual.</p>
-    <p class="source"><a href="https://openai.com/index/harness-engineering/" target="_blank" rel="noopener">OpenAI · 11 Feb 2026</a></p>
+    <figure class="file-window" aria-label="Example AGENTS.md file">
+      <header class="file-chrome">
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="file-path">repo / AGENTS.md</span>
+      </header>
+      <pre class="file-preview"><code># AGENTS.md
+<span class="file-note">Short on purpose. The detail lives in the links.</span>
+
+## Stack
+Node · Postgres · Next.js
+→ <span class="file-link">docs/stack.md</span>
+
+## Before you build
+→ <span class="file-link">openspec/changes/&lt;ticket&gt;/</span>  the spec
+→ <span class="file-link">docs/adr/</span>                   decisions
+→ Linear issue                acceptance
+
+## Commands
+→ <span class="file-link">docs/commands.md</span>   test · migrate · lint
+
+## Never
+→ <span class="file-link">docs/guardrails.md</span>
+  Never write to production.
+  Never merge without a human.
+
+## Connections
+→ <span class="file-link">.mcp.json</span>   Linear · Docs · Postgres (read-only)</code></pre>
+    </figure>
   </div>
   <aside class="notes">
     <p><strong>60: 1:10.</strong></p>
     <p>"This file is a map. It points at the specs, the decisions, the tests, the migrations, and the lines that say never. It is not the manual."</p>
-    <p>"OpenAI tried one big AGENTS.md. It crowded the task, it went stale, and they could not check it. Keep the file a map. The docs it points at are the record, and CI checks that those docs stay current."</p>
+    <p>"A fat AGENTS.md crowds the task, goes stale, and nobody can check it. Keep the file a map. The docs it points at are the record, and CI checks that those docs stay current."</p>
   </aside>
 </section>
 
@@ -214,24 +289,44 @@
   data-title="The loop"
   data-background-color="oklch(0.16 0.022 285)"
 >
-  <div class="frame">
-    <p class="kicker">Anatomy of a change</p>
-    <div class="tree">
-      <div class="dir">openspec/changes/land-on-bike-computer/</div>
-      <div>proposal.md <span class="why">why, what, out of scope</span></div>
-      <div>tasks.md <span class="why">failing test, fix, migration</span></div>
-      <div>specs/… <span class="why">requirement + scenarios</span></div>
+  <div class="frame agents-file spec-file">
+    <div class="agents-copy">
+      <p class="kicker">Anatomy of a change</p>
+      <h2>Spec-Driven Development with OpenSpec.</h2>
+      <div class="tree">
+        <div class="dir">openspec/changes/<br />land-on-bike-computer/</div>
+        <div>proposal.md <span class="why">why, what, scope</span></div>
+        <div>design.md <span class="why">the how</span></div>
+        <div>tasks.md <span class="why">the plan</span></div>
+        <div class="tree-now">specs/…/spec.md <span class="why">acceptance</span></div>
+      </div>
     </div>
-    <p class="scenario">
-      <b class="c-intent">Given</b> a planned workout is sent to Garmin<br />
-      <b class="c-constraint">When</b> the rider opens the bike computer<br />
-      <b class="c-accept">Then</b> the ride is there
-    </p>
+    <figure class="file-window" aria-label="Example OpenSpec spec file">
+      <header class="file-chrome">
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="file-path">specs / garmin-sync / spec.md</span>
+      </header>
+      <pre class="file-preview"><code>## ADDED Requirements
+
+### Requirement: Rides land on the device
+A planned workout SHALL be scheduled on
+that day's Garmin calendar.
+
+#### Scenario: Rider opens the bike computer
+- <b class="c-intent">GIVEN</b> a planned workout is sent to Garmin
+- <b class="c-constraint">WHEN</b> the rider opens the bike computer
+- <b class="c-accept">THEN</b> the ride is there
+
+#### Scenario: Library alone is not enough
+- <b class="c-intent">GIVEN</b> the workout is only in the library
+- <b class="c-accept">THEN</b> the check fails</code></pre>
+    </figure>
   </div>
   <aside class="notes">
     <p><strong>60: 1:10.</strong></p>
-    <p>"Three files. Proposal is the intent: why, what, and what is out of scope. Tasks are the plan, one step at a time. The spec is the acceptance, in a form a reviewer and a test can both check."</p>
+    <p>"Four files. Proposal is the intent: why, what, and what is out of scope. Design is the how: the technical decisions. Tasks are the plan, one step at a time. The spec is the acceptance, in a form a reviewer and a test can both check."</p>
     <p>"Given a planned workout is sent to Garmin, when the rider opens the bike computer, the ride is there. Product and UX can review that without reading the code."</p>
+    <p>"And the second scenario is the trap from the afternoon: in the library alone does not count. That one fails on purpose."</p>
   </aside>
 </section>
 
@@ -320,29 +415,102 @@
 
 <section
   data-cut="60"
-  data-s="S17.1"
-  data-title="The loop"
+  data-s="S18.2"
+  data-title="Demo"
   data-background-color="oklch(0.16 0.022 285)"
 >
   <div class="frame">
-    <p class="kicker">One agent, one pull request</p>
-    <div class="lanes">
-      <div class="lane"><b>#122</b><em>own PR</em></div>
-      <div class="lane"><b>#123</b><em>own PR</em></div>
-      <div class="lane"><b>#124</b><em>own PR</em></div>
-      <div class="lane"><b>#125</b><em>own PR</em></div>
-      <div class="lane"><b>#126</b><em>own PR</em></div>
-      <div class="lane stop"><b>#127</b><em>Stopped. No docs, no build.</em></div>
-    </div>
-    <div class="call">
-      <span>Two of them both created migration <b>211</b>. Orchestration caught the clash.</span>
+    <p class="kicker">Live · about five minutes</p>
+    <h2>Linear → OpenSpec → Plan → Build → Review.</h2>
+    <div class="film film-5" aria-label="Five demo beats">
+      <figure>
+        <span class="idx">01</span>
+        <figcaption>Linear ticket</figcaption>
+      </figure>
+      <figure>
+        <span class="idx">02</span>
+        <figcaption>OpenSpec change</figcaption>
+      </figure>
+      <figure>
+        <span class="idx">03</span>
+        <figcaption>Approve the plan</figcaption>
+      </figure>
+      <figure>
+        <span class="idx">04</span>
+        <figcaption>Build one task</figcaption>
+      </figure>
+      <figure>
+        <span class="idx">05</span>
+        <figcaption>AI review, then me</figcaption>
+      </figure>
     </div>
   </div>
   <aside class="notes">
-    <p><strong>60: 1:10.</strong></p>
-    <p>"Each of these was its own pull request, from its own agent. I would not call them written specs."</p>
-    <p>"Parallel works when the tasks are independent. Six pull requests then arrive at once. The bottleneck moves to review."</p>
-    <p>"Two things went right. The orchestration platform caught two pull requests that had both created migration 211. And the agent for 127 refused to build, because the public docs did not confirm the endpoint. It went ahead only when I gave it the Garmin Training API docs."</p>
+    <p><strong>60: 5:00 live.</strong></p>
+    <p>"Same path, live. A small ticket. Not the Garmin bug. Weather in the Training calendar."</p>
+    <p>"One. Read the ticket in Linear. Acceptance is the line that matters. Two. Draft the OpenSpec change from that ticket. Stop at the proposal and the scenarios. Three. Plan mode. I change one step if I need to, then I approve. Four. Build one task at a time. Five. AI review first. Then I read the diff against the acceptance line."</p>
+    <p>"If a step stalls, I keep going from the next beat. If the agent is wrong, I reject it here, on stage."</p>
+  </aside>
+</section>
+
+<section
+  data-cut="60"
+  data-s="S18.3"
+  data-title="Demo"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">Demo ticket · paste into Linear</p>
+    <div class="tickets grow tickets-solo">
+      <article class="issue ready" aria-label="Demo ticket">
+        <header>
+          <span class="issue-id">DEMO-1</span>
+          <span class="issue-status on">Ready</span>
+        </header>
+        <h3 class="issue-title">Training calendar shows the weather for today and tomorrow</h3>
+        <div class="issue-fields">
+          <div>
+            <span class="lbl c-intent">Problem</span>
+            <p>Riders plan outdoor rides in the Training calendar, but they have to leave the app to check the weather.</p>
+          </div>
+          <div class="key">
+            <span class="lbl c-accept">Acceptance</span>
+            <ul>
+              <li>Today and tomorrow show a weather chip in the day header: icon, high temperature, and rain % when it is over 30%.</li>
+              <li>The forecast uses the rider's location, not the default coordinates.</li>
+              <li>All other days look as they do today.</li>
+              <li>If the weather request fails, the calendar still loads, without the chip.</li>
+              <li>A test covers which days get a chip and the failure case. Copy in en and de.</li>
+            </ul>
+          </div>
+          <div>
+            <span class="lbl c-constraint">Out of scope</span>
+            <ul>
+              <li>No location override per day.</li>
+              <li>No bad-weather hints on sessions.</li>
+              <li>No change to the weather API or the mobile app.</li>
+            </ul>
+          </div>
+          <div>
+            <span class="lbl">Links</span>
+            <ul>
+              <li><a href="https://linear.app/nplusone/issue/NPO-88" target="_blank" rel="noopener">NPO-88</a> (Training page weather, full scope)</li>
+              <li><code>components/training/day-column.tsx</code>, <code>GET /api/weather</code></li>
+            </ul>
+          </div>
+        </div>
+        <footer class="issue-meta">
+          <span class="chip">Feature</span>
+          <span class="chip">Demo</span>
+          <span class="chip">Agent-ready</span>
+        </footer>
+      </article>
+    </div>
+  </div>
+  <aside class="notes">
+    <p><strong>60: shown while you open Linear.</strong></p>
+    <p>"This is the ticket. A slice of a real N+One issue. Problem, acceptance, out of scope. Watch the edge case: if the weather fails, the calendar still has to load."</p>
+    <p>"This slide mirrors demo/TEST-TICKET.md. Fallback health-check ticket is in that file if the Training page is awkward on stage."</p>
   </aside>
 </section>
 
@@ -379,15 +547,14 @@
         <b>48%</b>
         <span>trust the output when they can easily verify it.</span>
       </p>
-      <p class="source"><a href="https://survey.stackoverflow.co/2026/ai/data/ai-trust" target="_blank" rel="noopener">Stack Overflow Developer Survey 2026</a></p>
-      <p class="source"><a href="https://www.atlassian.com/blog/ai-at-work/ai-sdlc-transformation-playbook" target="_blank" rel="noopener">Atlassian: AI reviews first, humans after.</a></p>
-      <p class="source">Small PRs. Read the test.</p>
+      <p class="source"><a href="https://survey.stackoverflow.co/2026/ai/data/ai-trust" target="_blank" rel="noopener">trust figure · Stack Overflow 2026</a></p>
+      <p class="source">AI review first. Then you. Small PRs. Read the test.</p>
     </div>
   </div>
   <aside class="notes">
     <p><strong>20: 0:45 · 60: 1:00.</strong></p>
     <p>"Next is the Code Review. Let the AI review go first, so your attention stays on judgment."</p>
-    <p>"In the Stack Overflow Developer Survey this year, they found that 48 percent of developers trust the output when they can easily verify it."</p>
+    <p>"People trust the output when they can check it. About half say that. That is why I review against the spec, not against a green build."</p>
     <p>"In my reviews, I check four things. Did it meet the spec. Does the test cover the real case. Is anything outside the scope. Is there dead code."</p>
     <p>"Never merge a pull request you have not read yourself."</p>
   </aside>
@@ -420,12 +587,12 @@
         <p>The test output, on the PR.</p>
       </article>
     </div>
-    <p class="source">Cap the Review Rounds. Re-review Only the New Diff. <a href="https://claude.dev/blog/solving-code-review-at-anthropic/" target="_blank" rel="noopener">Anthropic, 15 Oct 2026</a>.</p>
-    <p class="source"><a href="https://www.atlassian.com/blog/development/high-throughput-engineers-ai" target="_blank" rel="noopener">Atlassian, 9 Aug 2026</a>. <a href="https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack/" target="_blank" rel="noopener">GitHub, 4 Aug 2026</a>. <a href="https://code.claude.com/docs/en/best-practices" target="_blank" rel="noopener">Anthropic best practices</a>.</p>
+    <p class="source">Cap the Review Rounds. Re-review Only the New Diff.</p>
   </div>
   <aside class="notes">
-    <p><strong>60: 0:40.</strong></p>
-    <p>"Small pull requests. If one is still a wall, stack it. Hold a few in your head. Read the test output the agent shows you. Cap the review rounds, and re-review only the new diff."</p>
+    <p><strong>60: 0:50.</strong></p>
+    <p>"Parallel works when the tasks are independent. Then five or six pull requests arrive at once, and the bottleneck moves to review."</p>
+    <p>"This is how I keep the fan from eating the day. Small pull requests. If one is still a wall, stack it. Hold a few in your head. Read the test output the agent shows you. Cap the review rounds, and re-review only the new diff."</p>
   </aside>
 </section>
 
@@ -476,6 +643,61 @@
     <p><strong>20: 0:30 · 60: 0:45.</strong></p>
     <p>"I merge every pull request myself. That is accountability, not distrust."</p>
     <p>"The spec, the plan, and the diff have to line up. A colleague should be able to review it in minutes."</p>
+  </aside>
+</section>
+
+<section
+  data-cut="60"
+  data-s="S21.1"
+  data-title="The loop"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame orch-frame">
+    <img
+      class="logo-grok-bot orch-logo"
+      src="images/logos/grok-bot.svg"
+      alt="Grok Bot"
+    />
+    <p class="kicker">Teaser · we will not dig in here</p>
+    <h2>Grok Bot.</h2>
+    <p class="lede">
+      Orchestration above the coding agents.
+    </p>
+    <div class="orch-teaser" aria-label="Grok Bot orchestration teaser">
+      <div class="merge-funnel" aria-label="My bots open pull requests. Only I merge.">
+        <span class="funnel-label">My bots</span>
+        <div class="fan">
+          <span>Chief of Staff</span>
+          <span>Support</span>
+          <span>Codebase</span>
+        </div>
+        <div class="funnel-mid">
+          <span class="funnel-label">Pull requests</span>
+          <i aria-hidden="true">↓</i>
+        </div>
+        <div class="merge-gate">I merge</div>
+      </div>
+    </div>
+    <p class="rule">Orchestration Runs the Work.</p>
+  </div>
+  <aside class="notes">
+    <p><strong>60: 0:50.</strong></p>
+    <p>
+      "You just saw the six stations. One more layer sits above them. Quick
+      teaser. I use Grok Bot for this. We will not dig deep into it today."
+    </p>
+    <p>
+      "I do not sit in six Cursor windows. Orchestration is the layer above the
+      coding agents. My bots live in Grok Bot. Chief of Staff, Customer
+      Support, and Codebase. Each bot has its own context and its own job.
+      When the work is ready, they hand it to Cursor. One cloud agent, one
+      pull request."
+    </p>
+    <p>
+      "That is what orchestration is for: many specialised bots, clear
+      hand-offs, and a place where clashes show up. Enough for now. The
+      platform does not merge. I do."
+    </p>
   </aside>
 </section>
 

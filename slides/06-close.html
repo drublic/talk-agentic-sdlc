@@ -1,6 +1,6 @@
 <section
   data-cut="20 60"
-  data-s="S10"
+  data-s="S38"
   data-title="Close"
   data-background-color="oklch(0.16 0.022 285)"
 >
@@ -27,7 +27,7 @@
 <section
   class="tone-paper"
   data-cut="20 60"
-  data-s="S10.2"
+  data-s="S38.1"
   data-title="Close"
   data-state="paper"
   data-background-color="oklch(0.955 0.016 90)"
@@ -40,7 +40,7 @@
   <aside class="notes">
     <p><strong>20: 0:25 · 60: 0:35.</strong></p>
     <p>
-      "On 15 October the agents built the fix. I reviewed the pull
+      "With that loop on 15 October the agents built the fix. I reviewed the pull
       requests myself. The rides landed on the bike computer. I wrote the
       riders back. They subscribed. That is the win."
     </p>
@@ -57,7 +57,7 @@
     <h2>Same Model. Different System.</h2>
     <div class="system-pair">
       <article class="system-then">
-        <p class="system-label">September</p>
+        <p class="system-label">June</p>
         <p class="system-lead">One commit.</p>
         <p class="system-cue">Spec in a doc.</p>
         <p class="system-miss">The ride never reached the bike computer.</p>
@@ -84,6 +84,40 @@
 </section>
 
 <section
+  data-cut="60"
+  data-s="S39.1"
+  data-title="Close"
+  data-background-color="oklch(0.16 0.022 285)"
+>
+  <div class="frame">
+    <p class="kicker">What to expect</p>
+    <h2>Generation Got Fast. Judgment Stays Scarce.</h2>
+    <p class="lede">
+      Planning, design, review, and maintenance are where the work piles up.
+    </p>
+    <div class="cues">
+      <article>
+        <b>Generation</b>
+        <span>Less code written by hand. More of it runs at once.</span>
+      </article>
+      <article>
+        <b>Judgment</b>
+        <span>Review, taste, and direction stay the craft.</span>
+      </article>
+      <article>
+        <b>The loop</b>
+        <span>Teams that write it into the repo pull ahead.</span>
+      </article>
+    </div>
+  </div>
+  <aside class="notes">
+    <p><strong>60: 0:30.</strong></p>
+    <p>"As less time goes to writing code by hand, coding leaves the single thread. More of it runs at once. Planning, design, review, and maintenance are the bottlenecks that show up."</p>
+    <p>"That is this talk. Generation got fast. Judgment stays the scarce work. The teams that write the loop into the repo pull ahead."</p>
+  </aside>
+</section>
+
+<section
   class="tone-paper"
   data-cut="20 60"
   data-s="S39.05"
@@ -101,38 +135,6 @@
   <aside class="notes">
     <p><strong>20: 0:15 · 60: 0:20.</strong></p>
     <p>"Vibe coding feels powerful. Agentic engineering ships reliably."</p>
-  </aside>
-</section>
-
-<section
-  data-cut="60"
-  data-s="S39.1"
-  data-title="Close"
-  data-background-color="oklch(0.16 0.022 285)"
->
-  <div class="frame">
-    <p class="kicker">What to expect</p>
-    <h2>The Scarce Work Stays the Craft.</h2>
-    <div class="cues">
-      <article>
-        <b>Generation.</b>
-        <span>Coding leaves the single thread. More of it runs at once.</span>
-      </article>
-      <article>
-        <b>Judgment.</b>
-        <span>Review, taste, and direction stay the scarce work.</span>
-      </article>
-      <article>
-        <b>The Repo.</b>
-        <span>Teams that write the loop down pull ahead.</span>
-      </article>
-    </div>
-    <p class="source"><a href="https://www.atlassian.com/blog/ai-at-work/ai-sdlc-transformation-playbook" target="_blank" rel="noopener">Atlassian, AI SDLC playbook · Oct 2026</a>. The cards are mine.</p>
-  </div>
-  <aside class="notes">
-    <p><strong>60: 0:30.</strong></p>
-    <p>"Atlassian, this October: as less time goes to writing code by hand, coding leaves the single thread. More of it runs at once. Planning, design, review, and maintenance are the bottlenecks that show up."</p>
-    <p>"That is this talk. Generation got fast. Judgment stays the scarce work. The teams that write the loop into the repo pull ahead."</p>
   </aside>
 </section>
 
@@ -170,7 +172,7 @@
     <p>"One. Add an AGENTS.md to one repo. Commands, constraints, and pointers. Keep it a map."</p>
     <p>"Two. Connect the tracker, and write the next ticket so an agent could start from it, including the edge case. Write the spec, then the plan, and only then the code."</p>
     <p>"Three. Make AI review a required check. Close the ticket when a human has verified it, not when someone merges."</p>
-    <p data-when="60">"If you are in product: rewrite one acceptance criterion this week as a scenario a test could check."</p>
+    <p data-when="60">"And a bonus, if you are in product: on your next ticket, write one line that says how we will know it worked for the user. For us that line was: the ride shows up on the bike computer. That one line is what the agent tests and what you check before you close the ticket."</p>
   </aside>
 </section>
 
@@ -217,29 +219,5 @@
     <p>"The QR is the blog if you want the deep dive."</p>
     <p data-when="20">"Thank you."</p>
     <p data-when="60">"Thank you. I'll take questions."</p>
-  </aside>
-</section>
-
-<section
-  class="tone-paper"
-  data-cut="60"
-  data-s="S42"
-  data-title="Questions"
-  data-state="paper"
-  data-background-color="oklch(0.955 0.016 90)"
->
-  <div class="frame center">
-    <p class="kicker">Questions</p>
-    <h1>Same Model.<br />Different System.</h1>
-    <p class="lede">hansreinl.de · hi@hansreinl.de</p>
-  </div>
-  <aside class="notes">
-    <p><strong>60: about 10 minutes.</strong></p>
-    <p>"Which language model? It does not matter much here. Pick the model for the job. Same language model, different system."</p>
-    <p>"How do juniors learn? The spec and the plan are the learning loop. Skipping them skips the learning."</p>
-    <p>"What does it cost? The real limit I hit was CI and review. If those checks do not run, they have to block the merge. I will not invent a euro figure."</p>
-    <p>"Does this work outside a green field? Garmin was already built by agents. There was no spec, and no doc of how it should really work. It lived in chats, and in my head."</p>
-    <p>"Production? Read-only. Select queries. Writes and merges stay human."</p>
-    <p>"OpenAI lets agents merge in one repo they wrote about in February. In that repo, review is not required, and agents often merge. They say that should not be assumed to generalise. I still merge. The part I took from them is the map, not the merge."</p>
   </aside>
 </section>

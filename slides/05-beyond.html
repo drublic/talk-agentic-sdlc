@@ -9,14 +9,14 @@
   <div class="frame center">
     <p class="kicker">Zoom out</p>
     <h1>Beyond One Developer.</h1>
-    <p class="lede">Verification. Release. Team. Roles.</p>
+    <p class="lede">Verification. Release. The spec. Roles.</p>
   </div>
   <aside class="notes">
     <p><strong>60: 0:15.</strong></p>
     <p>
-      "Everything so far was me and my agents. Now: what changes at Joyn.
-      A streaming platform. A lot of teams. About 55 people, product, UX,
-      and a release train."
+      "Everything so far was me and my agents. Now: what changes when it's
+      a whole organization. Several teams, product, UX, and a shared
+      release process."
     </p>
   </aside>
 </section>
@@ -34,24 +34,23 @@
       <article>
         <b>83%</b>
         <span>use at least one AI tool.</span>
-        <a class="source" href="https://survey.stackoverflow.co/2026/ai/data/ai-select" target="_blank" rel="noopener">Stack Overflow Developer Survey 2026</a>
       </article>
       <article>
         <b>48%</b>
         <span>trust the output when they can easily verify it.</span>
-        <a class="source" href="https://survey.stackoverflow.co/2026/ai/data/ai-trust" target="_blank" rel="noopener">Stack Overflow Developer Survey 2026</a>
       </article>
       <article>
-        <b>54.2%</b>
+        <b>54%</b>
         <span>Hard-to-review generated code cost the most time.</span>
-        <a class="source" href="https://survey.stackoverflow.co/2026/technology/data/disruption" target="_blank" rel="noopener">Stack Overflow Developer Survey 2026</a>
       </article>
     </div>
+    <p class="source"><a href="https://survey.stackoverflow.co/2026/ai/" target="_blank" rel="noopener">field figures · Stack Overflow 2026</a></p>
   </div>
   <aside class="notes">
     <p><strong>60: 0:40.</strong></p>
-    <p>"The Stack Overflow Developer Survey from 2026 found three things. 83 percent use at least one AI tool. 48 percent trust the output when they can easily verify it. And hard-to-review generated code cost the most time, 54 percent."</p>
-    <p>"If someone asks: the 83 percent is any AI tool, assistants and agents together. The 54 percent is the share who named hard-to-review code as what cost the most time. It is not a rise in review time. Plausible but wrong code was higher, and it is not on this slide."</p>
+    <p>"First, this isn't just my problem. Adoption is done: 83 percent already use at least one AI tool. Generating code isn't the hard part anymore."</p>
+    <p>"Trust is. Just under half trust the output, and only when they can easily check it. And 54 percent say what cost them the most time was generated code that's hard to review."</p>
+    <p>"So the bottleneck moved. Writing is cheap. Checking is expensive. My Garmin bug had green tests and a closed ticket, and nobody checked the bike computer. <em>[pause]</em> The check is the work. Everything that follows is about making that check happen in a team."</p>
   </aside>
 </section>
 
@@ -70,19 +69,15 @@
       <div class="seg closed"><b>Stops the Merge</b><span>A missing check is a stop, not a shrug.</span></div>
       <div class="seg"><b>51%</b><span>Only if the loop runs.</span></div>
     </div>
-    <figure class="proof">
-      <img
-        src="images/atlassian-vulnerabilities.png?v=1"
-        alt="Atlassian research callout: agent loops in Jira resolve 51% of potential vulnerabilities."
-      />
-    </figure>
-    <p class="source"><a href="https://www.atlassian.com/blog/ai-at-work/ai-sdlc-transformation-playbook" target="_blank" rel="noopener">Atlassian, AI SDLC playbook · Oct 2026</a></p>
+    <p class="source"><a href="https://www.atlassian.com/blog/ai-at-work/ai-sdlc-transformation-playbook" target="_blank" rel="noopener">agent-loop figure · Atlassian, Oct 2026</a></p>
   </div>
   <aside class="notes">
     <p><strong>60: 1:45.</strong></p>
-    <p>"Hard means the check cannot be skipped in silence. My GitHub billing limit let the review skip. The review did not run, and the pull requests merged anyway."</p>
-    <p>"Atlassian reports agent loops resolving 51 percent of potential vulnerabilities. Loops can fix a lot. Only if the loop actually runs."</p>
-    <p>"Tests are checked against the spec's scenarios, not just against a green build."</p>
+    <p>"So how do you make the check happen in a team? Two kinds of review, and one hard gate."</p>
+    <p>"First, the AI review. Let it take the mechanical findings: the missing null check, the unused import, the query without an index. It is fast, and it doesn't get bored."</p>
+    <p>"Then the human. Judgment. Is this the right change? Does it do what the ticket actually asked for? That is the part you can't hand off."</p>
+    <p>"And the gate. If either review is missing, the merge stops. <em>[pause]</em> That happened to me. My GitHub billing limit ran out, the AI review quietly didn't run, and the pull requests merged anyway. Nothing was red. It just shrugged. A missing check has to be a stop, not a shrug."</p>
+    <p>"Loops catch a lot. Atlassian puts it at about half of potential vulnerabilities. But only if the loop actually runs."</p>
   </aside>
 </section>
 
@@ -93,7 +88,8 @@
   data-background-color="oklch(0.16 0.022 285)"
 >
   <div class="frame">
-    <p class="kicker">Definition of Done, agent edition</p>
+    <p class="kicker">Definition of Done</p>
+    <h2>Done Means Verified. Not Merged.</h2>
     <div class="kanban grow">
       <div class="col">
         <strong>Spec</strong>
@@ -115,9 +111,9 @@
   </div>
   <aside class="notes">
     <p><strong>60: 1:15.</strong></p>
-    <p>"For product owners: Done is your word. Take it back from the webhook. If the tracker closes when someone merges, Done means someone pressed a button."</p>
-    <p>"Done, for this kind of work, is four things. Every scenario has a test, including the edge. The AI review ran, and the findings were resolved. A human checked the real system. Then the ticket closes."</p>
-    <p>"For Garmin, verified would have been a read-only check that the ride is on the bike computer."</p>
+    <p>"The gate stops a bad merge. But a merge is not the finish line. Done means verified, not merged."</p>
+    <p>"Right now, in most trackers, a webhook closes the ticket the moment someone merges. Then Done only means someone pressed a button. For product owners: Done is your word. Take it back from the webhook."</p>
+    <p>"So Done is four columns. Spec: every scenario has a test, including the edge case. Reviewed: the AI review ran, and its findings were resolved. <em>[point at Verified]</em> Verified: a human checked the real system. Only then, Done. The ticket closes here, not at the merge."</p>
   </aside>
 </section>
 
@@ -145,8 +141,8 @@
   </div>
   <aside class="notes">
     <p><strong>60: 1:30.</strong></p>
-    <p>"The agent reports. The human decides. Agents are good at reading production, summarising, and checking. The bike computer. The production database, select queries only. Validate, and fail clearly. Never silently rewrite."</p>
-    <p>"Go or no-go, incidents, and the writes stay human. The read-only Garmin check was the third call at 14:34. Look at the bike computer before calling the ride done."</p>
+    <p>"The agent reports. The human decides. Agents are good at reading production, summarising, and checking."</p>
+    <p>"Go or no-go, incidents, and the writes stay human."</p>
     <p>"AI does not replace the SDLC. It makes the SDLC more important."</p>
   </aside>
 </section>
@@ -158,29 +154,33 @@
   data-background-color="oklch(0.16 0.022 285)"
 >
   <div class="frame">
-    <p class="kicker">The spec is the shared interface</p>
-    <div class="around">
-      <article class="role-card">
-        <h3>Product</h3>
-        <p>Intent and acceptance. The ticket and the scenarios.</p>
-      </article>
-      <article class="specfile">
+    <p class="kicker">When generation is cheap</p>
+    <h2>The Spec Is the Shared Interface.</h2>
+    <p class="lede">
+      Product and engineering review the spec together, before any code.
+    </p>
+    <div class="spec-hub" aria-label="Product, UX, and Engineering meet in proposal.md">
+      <div class="spoke">Product</div>
+      <div class="spoke">UX</div>
+      <div class="spoke">Engineering</div>
+      <div class="join" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="hub-file">
         <b>proposal.md</b>
-        <p>Versioned. Reviewable by all three.</p>
-      </article>
-      <article class="role-card">
-        <h3>UX</h3>
-        <p>Explore fast. Hand over decisions, not only pixels.</p>
-        <h3 style="margin-top: 28px">Engineering</h3>
-        <p>Constraints, architecture, plan approval, review.</p>
-      </article>
+        <span>The contract</span>
+      </div>
     </div>
+    <p class="rule">Review the Spec Together. Before Any Code.</p>
   </div>
   <aside class="notes">
-    <p><strong>60: 2:00.</strong></p>
+    <p><strong>60: 1:20.</strong></p>
     <p>"When generation is cheap, the expensive mistake is building the wrong thing. That is product and UX, and it now drives the agent directly."</p>
     <p>"Product owns intent and acceptance, the ticket and the scenarios. UX explores fast, and hands over decisions, not only pixels. Engineering owns the constraints, the architecture, the plan, and the review."</p>
-    <p>"Fewer meetings about how to implement it. More time reviewing the spec together. A product owner who can read proposal.md is reviewing the contract."</p>
+    <p>
+      "They meet in one file. proposal.md. Versioned. Reviewable by all three.
+      Product and engineering review the spec together, before any code. Fewer
+      meetings about how to implement it. A product owner who can read that file
+      is reviewing the contract."
+    </p>
   </aside>
 </section>
 
@@ -191,19 +191,20 @@
   data-background-color="oklch(0.16 0.022 285)"
 >
   <div class="frame">
-    <p class="kicker">Atlassian's five leadership moves</p>
+    <p class="kicker">Operating model</p>
+    <h2>Five Moves I Would Make.</h2>
     <div class="stairs">
       <article><b>Context</b><span>Station 2</span></article>
-      <article><b>Measure</b><span>Cycle time, review time, reopened Dones</span></article>
+      <article><b>Measure</b><span>Cycle time · review time · reopened Dones</span></article>
       <article><b>One Workflow</b><span>One loop, one team</span></article>
       <article><b>Accountability</b><span>A human merges and verifies</span></article>
       <article><b>The Model</b><span>Specialists, hand-offs, a human at the merge</span></article>
     </div>
-    <p class="source"><a href="https://www.atlassian.com/blog/ai-at-work/ai-sdlc-transformation-playbook" target="_blank" rel="noopener">Atlassian · Oct 2026</a>. The captions are mine.</p>
+    <p class="rule">Take the Baseline First.</p>
   </div>
   <aside class="notes">
     <p><strong>60: 1:45.</strong></p>
-    <p>"Five moves. Put context in the repo. Measure cycle time, review time, and how often Done reopens. One workflow, one loop, one team. A human merges and verifies. Specialists hand off, and a human is at the merge."</p>
+    <p>"Five moves I would make. Put context in the repo. Measure cycle time, review time, and how often Done reopens. Take the baseline first. One workflow, one loop, one team. A human merges and verifies. Specialists hand off, and a human is at the merge."</p>
     <p>"My orchestration platform is a small version of that. Specialised agents, clear hand-offs, and I merge."</p>
     <p>"Capacity is no longer set by how many people type. It is set by how many specs you can write, and how many pull requests you can review well."</p>
   </aside>
@@ -220,11 +221,10 @@
       <span class="mark" aria-hidden="true">“</span>
       AI amplifies your engineering culture: its strengths and its weaknesses.
     </p>
-    <p class="source"><a href="https://www.linkedin.com/posts/addyosmani_the-new-software-development-lifecycle-with-activity-7472535945221783552-jk84" target="_blank" rel="noopener">Addy Osmani</a></p>
   </div>
   <aside class="notes">
     <p><strong>60: 0:45.</strong></p>
-    <p>"AI amplifies your engineering culture. Its strengths, and its weaknesses. If your culture skips reviews, agents will skip reviews faster. If your culture writes good tickets, agents will make that pay off faster. So, who does what?"</p>
+    <p>"What I keep seeing: AI amplifies your engineering culture. Its strengths, and its weaknesses. If your culture skips reviews, agents will skip reviews faster. If your culture writes good tickets, agents will make that pay off faster. So, who does what?"</p>
   </aside>
 </section>
 
@@ -235,32 +235,60 @@
   data-background-color="oklch(0.16 0.022 285)"
 >
   <div class="frame">
-    <p class="kicker">If I were VP Engineering at Joyn</p>
-    <div class="two">
-      <div>
+    <p class="kicker">If I led engineering</p>
+    <h2>Redesigning Jobs Around Judgment.</h2>
+    <p class="lede">Agents generate. People decide. Leaders design that system.</p>
+    <div class="roles-ai" aria-label="What changes for juniors, seniors, and the VP">
+      <article>
         <h3>Juniors</h3>
         <ul>
-          <li>Need the loop more, not less.</li>
-          <li>Spec and plan are where they learn.</li>
-          <li>Skipping those steps skips the learning.</li>
+          <li>Learn in the loop: specs, plans, and review.</li>
+          <li>Use agents to see more patterns, not to skip deciding Done.</li>
+          <li>Skipping the loop skips the craft.</li>
         </ul>
-      </div>
-      <div>
+      </article>
+      <article>
         <h3>Seniors</h3>
         <ul>
-          <li>Move from writing to specs, constraints, harness, review.</li>
-          <li>Taste is the product: what good looks like.</li>
-          <li>My Garmin rule was in my head, then in memory, never in the repo.</li>
+          <li>Own taste in the repo: architecture, constraints, harness.</li>
+          <li>Review and verification are the scarce craft.</li>
+          <li>Own orchestration: hand-offs, bots, and what reaches a human.</li>
         </ul>
-      </div>
+      </article>
+      <article>
+        <h3>Leaders</h3>
+        <ul>
+          <li>Set capacity on specs and review, not typing speed.</li>
+          <li>Make one loop the default across teams.</li>
+          <li>Protect the junior pipeline. Demand judgment in writing.</li>
+        </ul>
+      </article>
     </div>
   </div>
   <aside class="notes">
     <p><strong>60: 1:30.</strong></p>
-    <p>"Joyn is a streaming platform. I was VP Engineering there. A lot of teams: about 55 people, 6 teams, about 11 million monthly users. If I were VP Engineering there today."</p>
-    <p>"Juniors need the loop more, not less. The spec and the plan are where they learn. Skipping those steps skips the learning."</p>
-    <p>"Seniors move from writing the code to the specs, the constraints, the harness, and the review. Taste is the product. What good looks like."</p>
-    <p>"My Garmin rule was in my head, then in an agent's memory, and never in the repo."</p>
+    <p>
+      "I was VP Engineering at Joyn. About 55 people, six teams, about 11 million
+      monthly users. If I led engineering at a company like ProSiebenSat.1 today, I would not chase
+      typing speed. I would redesign the jobs around judgment."
+    </p>
+    <p>
+      "Juniors: the loop is the apprenticeship. Specs, plans, and review. Agents
+      let them see more patterns. They must not skip deciding what Done means.
+      Skip the loop, and you skip the craft."
+    </p>
+    <p>
+      "Seniors: less time writing every line, more time on architecture,
+      constraints, the harness, and review. Taste has to live in the repo. And
+      they own orchestration: which bots run, how work hands off, and what still
+      reaches a human."
+    </p>
+    <p>
+      "And the VP job: set capacity on how many specs you can write and how many
+      pull requests you can review well. One loop across teams. Protect how
+      juniors grow. Demand that senior judgment is written down. Agents generate.
+      People decide. Leaders design that system."
+    </p>
   </aside>
 </section>
 
@@ -273,15 +301,30 @@
   <div class="frame">
     <p class="kicker">Hire for the craft</p>
     <h2>Specifying. Reviewing. Judgment.</h2>
-    <p class="interview">
-      Here's PR #78. Tests are green. Would you merge?
-    </p>
+    <aside class="interview-card" aria-label="Interview exercise">
+      <header>
+        <span class="tag">Interview</span>
+        <span class="meta">45 min · Spec + agent-written PR</span>
+      </header>
+      <p class="setup">
+        You get the acceptance criteria and an agent-written pull request.
+      </p>
+      <p class="ask">
+        Here's PR #78. Tests are green. Would you merge?
+      </p>
+      <p class="follow">
+        What is wrong? What would you check before you say yes?
+      </p>
+    </aside>
   </div>
   <aside class="notes">
     <p><strong>60: 1:45.</strong></p>
     <p>"Generation is solved. Verification, judgment, and direction are the new craft. Hire for that craft."</p>
-    <p>"One interview I would run: give someone a spec and an agent-written pull request, and ask what is wrong. Here is pull request 78. The tests are green. Would you merge? They are green, there is a spec doc, and the missing case is the ride on the bike computer."</p>
-    <p>"Product and engineering review the spec together, before any code."</p>
-    <p>"Measure cycle time, review time, and how often Done reopens. Take the baseline first."</p>
+    <p>"One interview I would run: give someone a spec and an agent-written pull request, and ask what is wrong. Here is pull request 78. The tests are green. Would you merge?"</p>
+    <p>
+      "Look out for: Does acceptance name the real outcome, or only a side
+      effect? Do the green tests check that outcome? Was there a real review,
+      or only a green build? And does Done mean verified, or just merged?"
+    </p>
   </aside>
 </section>
