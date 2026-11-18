@@ -30,6 +30,15 @@ jobs:
           cp -R css js slides images demo cut-20 _site/
           touch _site/.nojekyll
 
+      - name: Strip speaker notes
+        run: |
+          find _site/slides _site/cut-20/slides -name '*.html' -print0 \
+            | xargs -0 perl -0pi -e 's{[ \t]*<aside class="notes">.*?</aside>[ \t]*\n?}{}gs'
+          if grep -rl 'class="notes"' _site; then
+            echo "Speaker notes still present in the files above" >&2
+            exit 1
+          fi
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3
